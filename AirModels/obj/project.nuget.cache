@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "nVXo/rYcVUC8DReOjZhjIvoe7vyCv2K2ATm1wF74p6hitLXkfXYheXKa4krYYGhW9fOLmKV+92AfsbMWZ043Bg==",
+  "success": true,
+  "projectFilePath": "E:\\Programaion\\Proyectos\\ServerApp\\AirModels\\AirModels.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\JAHC-DeV\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\JAHC-DeV\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

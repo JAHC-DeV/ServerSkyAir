@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AirModels\AirModels.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="DarkRift">
+      <HintPath>bin\Debug\net6.0\DarkRift.dll</HintPath>
+    </Reference>
+    <Reference Include="DarkRift.Server">
+      <HintPath>bin\Debug\net6.0\DarkRift.Server.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="xcopy /y E:\Programaion\Proyectos\ServerApp\FisrtPlugin\bin\Debug\net6.0\FisrtPlugin.dll E:\Programaion\Proyectos\ServerApp\ConsoleApp1\bin\Debug\net6.0\Plugins\FisrtPlugin.dll" />
+  </Target>
+
+</Project>

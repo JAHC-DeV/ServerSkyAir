@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="xcopy /y E:\Programaion\Proyectos\ServerApp\AirModels\bin\Debug\netstandard2.0\AirModels.dll E:\Programaion\Proyectos\ServerApp\ConsoleApp1\bin\Debug\net6.0\Plugins\AirModels.dll&#xD;&#xA;xcopy /y E:\Programaion\Proyectos\ServerApp\AirModels\bin\Debug\netstandard2.0\AirModels.dll E:\Programaion\Proyectos\DarkRift\Assets\Plugins\AirModels.dll" />
+  </Target>
+
+  <ItemGroup>
+    <Reference Include="DarkRift">
+      <HintPath>..\FisrtPlugin\bin\Debug\net6.0\DarkRift.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
