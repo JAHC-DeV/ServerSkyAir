@@ -1,0 +1,17 @@
+E:\Proyects\ServerApp\FisrtPlugin\bin\Debug\net6.0\linux-x64\FisrtPlugin.deps.json
+E:\Proyects\ServerApp\FisrtPlugin\bin\Debug\net6.0\linux-x64\FisrtPlugin.dll
+E:\Proyects\ServerApp\FisrtPlugin\bin\Debug\net6.0\linux-x64\FisrtPlugin.pdb
+E:\Proyects\ServerApp\FisrtPlugin\bin\Debug\net6.0\linux-x64\AirModels.dll
+E:\Proyects\ServerApp\FisrtPlugin\bin\Debug\net6.0\linux-x64\DarkRift.dll
+E:\Proyects\ServerApp\FisrtPlugin\bin\Debug\net6.0\linux-x64\DarkRift.Server.dll
+E:\Proyects\ServerApp\FisrtPlugin\bin\Debug\net6.0\linux-x64\AirModels.pdb
+E:\Proyects\ServerApp\FisrtPlugin\obj\Debug\net6.0\linux-x64\FisrtPlugin.csproj.AssemblyReference.cache
+E:\Proyects\ServerApp\FisrtPlugin\obj\Debug\net6.0\linux-x64\FisrtPlugin.GeneratedMSBuildEditorConfig.editorconfig
+E:\Proyects\ServerApp\FisrtPlugin\obj\Debug\net6.0\linux-x64\FisrtPlugin.AssemblyInfoInputs.cache
+E:\Proyects\ServerApp\FisrtPlugin\obj\Debug\net6.0\linux-x64\FisrtPlugin.AssemblyInfo.cs
+E:\Proyects\ServerApp\FisrtPlugin\obj\Debug\net6.0\linux-x64\FisrtPlugin.csproj.CoreCompileInputs.cache
+E:\Proyects\ServerApp\FisrtPlugin\obj\Debug\net6.0\linux-x64\FisrtPlugin.csproj.CopyComplete
+E:\Proyects\ServerApp\FisrtPlugin\obj\Debug\net6.0\linux-x64\FisrtPlugin.dll
+E:\Proyects\ServerApp\FisrtPlugin\obj\Debug\net6.0\linux-x64\refint\FisrtPlugin.dll
+E:\Proyects\ServerApp\FisrtPlugin\obj\Debug\net6.0\linux-x64\FisrtPlugin.pdb
+E:\Proyects\ServerApp\FisrtPlugin\obj\Debug\net6.0\linux-x64\ref\FisrtPlugin.dll

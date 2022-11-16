@@ -26,6 +26,32 @@
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
       }
+    },
+    ".NETStandard,Version=v2.0/linux-x64": {
+      "Microsoft.NETCore.Platforms/1.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard1.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/_._": {}
+        }
+      },
+      "NETStandard.Library/2.0.3": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0"
+        },
+        "compile": {
+          "lib/netstandard1.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/_._": {}
+        },
+        "build": {
+          "build/netstandard2.0/NETStandard.Library.targets": {}
+        }
+      }
     }
   },
   "libraries": {
@@ -185,11 +211,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Programaion\\Proyectos\\ServerApp\\AirModels\\AirModels.csproj",
+      "projectUniqueName": "E:\\Proyects\\ServerApp\\AirModels\\AirModels.csproj",
       "projectName": "AirModels",
-      "projectPath": "E:\\Programaion\\Proyectos\\ServerApp\\AirModels\\AirModels.csproj",
+      "projectPath": "E:\\Proyects\\ServerApp\\AirModels\\AirModels.csproj",
       "packagesPath": "C:\\Users\\JAHC-DeV\\.nuget\\packages\\",
-      "outputPath": "E:\\Programaion\\Proyectos\\ServerApp\\AirModels\\obj\\",
+      "outputPath": "E:\\Proyects\\ServerApp\\AirModels\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\JAHC-DeV\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -236,7 +262,12 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+      }
+    },
+    "runtimes": {
+      "linux-x64": {
+        "#import": []
       }
     }
   }

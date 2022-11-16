@@ -1,0 +1,12 @@
+E:\Proyects\ServerApp\AirModels\bin\Debug\netstandard2.0\linux-x64\AirModels.deps.json
+E:\Proyects\ServerApp\AirModels\bin\Debug\netstandard2.0\linux-x64\AirModels.dll
+E:\Proyects\ServerApp\AirModels\bin\Debug\netstandard2.0\linux-x64\AirModels.pdb
+E:\Proyects\ServerApp\AirModels\bin\Debug\netstandard2.0\linux-x64\DarkRift.dll
+E:\Proyects\ServerApp\AirModels\obj\Debug\netstandard2.0\linux-x64\AirModels.csproj.AssemblyReference.cache
+E:\Proyects\ServerApp\AirModels\obj\Debug\netstandard2.0\linux-x64\AirModels.GeneratedMSBuildEditorConfig.editorconfig
+E:\Proyects\ServerApp\AirModels\obj\Debug\netstandard2.0\linux-x64\AirModels.AssemblyInfoInputs.cache
+E:\Proyects\ServerApp\AirModels\obj\Debug\netstandard2.0\linux-x64\AirModels.AssemblyInfo.cs
+E:\Proyects\ServerApp\AirModels\obj\Debug\netstandard2.0\linux-x64\AirModels.csproj.CoreCompileInputs.cache
+E:\Proyects\ServerApp\AirModels\obj\Debug\netstandard2.0\linux-x64\AirModels.csproj.CopyComplete
+E:\Proyects\ServerApp\AirModels\obj\Debug\netstandard2.0\linux-x64\AirModels.dll
+E:\Proyects\ServerApp\AirModels\obj\Debug\netstandard2.0\linux-x64\AirModels.pdb

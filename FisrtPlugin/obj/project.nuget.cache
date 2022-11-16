@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "jPzDx31IeAJh4RUvImxgtKrxacO/NneoaB/EQ7qHTW1BEUeNkVDTg9WXVnTxMlKhtQuT/Uvfh+F4ZXe0alHzTA==",
+  "dgSpecHash": "q7b/l8ZS3EKrDk5nC06C4tMY7VrqR7WuAD68YNJxA8LGQU3iUlF89kcCYprHfqLDcbIOoMbHAjci4TD817OGgA==",
   "success": true,
-  "projectFilePath": "E:\\Programaion\\Proyectos\\ServerApp\\FisrtPlugin\\FisrtPlugin.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "E:\\Proyects\\ServerApp\\FisrtPlugin\\FisrtPlugin.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\JAHC-DeV\\.nuget\\packages\\microsoft.netcore.app.runtime.linux-x64\\6.0.11\\microsoft.netcore.app.runtime.linux-x64.6.0.11.nupkg.sha512",
+    "C:\\Users\\JAHC-DeV\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.linux-x64\\6.0.11\\microsoft.aspnetcore.app.runtime.linux-x64.6.0.11.nupkg.sha512"
+  ],
   "logs": []
 }

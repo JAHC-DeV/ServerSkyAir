@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Programaion\\Proyectos\\ServerApp\\ConsoleApp1\\ConsoleApp1.csproj": {}
+    "E:\\Proyects\\ServerApp\\ConsoleApp1\\ConsoleApp1.csproj": {}
   },
   "projects": {
-    "E:\\Programaion\\Proyectos\\ServerApp\\ConsoleApp1\\ConsoleApp1.csproj": {
+    "E:\\Proyects\\ServerApp\\ConsoleApp1\\ConsoleApp1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Programaion\\Proyectos\\ServerApp\\ConsoleApp1\\ConsoleApp1.csproj",
-        "projectName": "ConsoleApp1",
-        "projectPath": "E:\\Programaion\\Proyectos\\ServerApp\\ConsoleApp1\\ConsoleApp1.csproj",
+        "projectUniqueName": "E:\\Proyects\\ServerApp\\ConsoleApp1\\ConsoleApp1.csproj",
+        "projectName": "ServerApp",
+        "projectPath": "E:\\Proyects\\ServerApp\\ConsoleApp1\\ConsoleApp1.csproj",
         "packagesPath": "C:\\Users\\JAHC-DeV\\.nuget\\packages\\",
-        "outputPath": "E:\\Programaion\\Proyectos\\ServerApp\\ConsoleApp1\\obj\\",
+        "outputPath": "E:\\Proyects\\ServerApp\\ConsoleApp1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\JAHC-DeV\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -55,7 +55,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

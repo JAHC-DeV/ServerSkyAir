@@ -15,18 +15,18 @@ namespace FisrtPlugin
         public float[] P_1 = new float[3] { -2.11f, -6.09f, 13.11059f};
         public float[] P_2 = new float[3] { 21.2f, -6.09f, 13.11059f };
 
-        private List<PlayerData> playersInLobby;
+        private Dictionary<int,PlayerData> playersInLobby;
         public FisrtPlugin(PluginLoadData pluginLoadData) : base(pluginLoadData)
         {
             Console.WriteLine("AlRight");
-            playersInLobby = new List<PlayerData>();
+            playersInLobby = new Dictionary<int, PlayerData>();
             ClientManager.ClientConnected += NewClient_Connected;
             ClientManager.ClientDisconnected += Client_DisconnectedEvent;
         }
 
         private void Client_DisconnectedEvent(object? sender, ClientDisconnectedEventArgs e)
         {
-            PlayerData? out_Player = playersInLobby.Find(f => f.PlayerID == e.Client.ID);
+            PlayerData? out_Player = playersInLobby[e.Client.ID];
             e.Client.MessageReceived -= NewGlobal_MessageReceived;
             DisconnectPlayer(out_Player);
         }
@@ -39,7 +39,6 @@ namespace FisrtPlugin
 
         private void NewGlobal_MessageReceived(object? sender, MessageReceivedEventArgs e)
         {
-            Console.WriteLine("");
             switch ((Tags)e.Tag)
             {
                 case Tags.NewPlayerInstantiateData:
@@ -53,8 +52,7 @@ namespace FisrtPlugin
                     break;
                 case Tags.UpdatePlayerData:
                     var playerData = e.GetMessage().Deserialize<PlayerData>();
-                    UpdatePlayerInfoToSend(playerData);
-                    Console.WriteLine("Update Recived");
+                    UpdatePlayerInfoToSend(playerData);                  
                     break;
                 default:
                     break;
@@ -63,15 +61,18 @@ namespace FisrtPlugin
 
         private void UpdatePlayerInfoToSend(PlayerData playerData)
         {
-            playersInLobby[playerData.PlayerID] = playerData;
+            if (playersInLobby.ContainsKey(playerData.PlayerID))
+                playersInLobby[playerData.PlayerID] = playerData;
+            
             using (var msg = Message.Create((ushort)Tags.UpdatePlayerData, playerData))
             {
                 for (int i = 0; i < ClientManager.GetAllClients().Length; i++)
                 {
-                    if (playerData.PlayerID == ClientManager.GetAllClients()[i].ID)
-                        continue;
                     try
                     {
+                        if (playerData.PlayerID == ClientManager.GetAllClients()[i].ID)
+                        continue;
+
                         ClientManager.GetAllClients()[i].SendMessage(msg, SendMode.Unreliable);
                     }
                     catch (Exception) { Console.WriteLine("Aqui 1"); continue; }
@@ -96,32 +97,33 @@ namespace FisrtPlugin
                 player.P_X = P_2[0];
                 player.P_Y = P_2[1];
                 player.P_Z = P_2[2];
-            }                      
+            }           
             var playerData = new PlayerData(player);
-            playersInLobby.Add(playerData);
+            playersInLobby.Add(player.PlayerID,playerData);
 
             using (var msg = Message.Create((ushort)Tags.NewPlayerSpawnData, playerData))
             {
                 DarkRiftWriter allPlayer = DarkRiftWriter.Create();
-                foreach (var item in playersInLobby)
+                try
                 {
-                    try
-                    {
-                        allPlayer.Write(new PlayerData(item));
-                    }
-                    catch (Exception) { Console.WriteLine("Aqui 2"); continue; }
+                    Console.WriteLine("playersInLobby: {0}", playersInLobby.Count);
+                    if (playersInLobby.Count != 0)
+                        allPlayer.Write(playersInLobby.Values.ToArray());
+                    else
+                        allPlayer.Write(new PlayerData[1] { playerData });
                 }
-               
+                catch (Exception) { Console.WriteLine("Aqui 2");  }
+
                 foreach (var item in ClientManager.GetAllClients())
                 {
                     try
                     {
                         if (player.PlayerID == item.ID)
                         {
-                            msg.Tag = (ushort)Tags.AllPlayersSpawnData;
+                            msg.Tag = (ushort)Tags.AllPlayersSpawnData;                            
                             msg.Serialize(allPlayer);
                             item.SendMessage(msg, SendMode.Reliable);
-                            msg.Serialize(playerData);
+                            msg.Serialize(playerData);                            
                             msg.Tag = (ushort)Tags.NewPlayerSpawnData;
                             continue;
                         }
@@ -148,9 +150,10 @@ namespace FisrtPlugin
                     catch (Exception) { Console.WriteLine("Aqui 3"); continue; }
                 }
 
-                if (playersInLobby.Contains(player))                
-                    playersInLobby.Remove(player);                    
+                if (playersInLobby.ContainsKey(player.PlayerID))                
+                    playersInLobby.Remove(player.PlayerID);                    
             }
+            Console.WriteLine("Player Disconnected Now: {0}", playersInLobby.Count);
         }
     }
 }

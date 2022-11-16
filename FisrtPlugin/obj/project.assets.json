@@ -12,6 +12,18 @@
           "bin/placeholder/AirModels.dll": {}
         }
       }
+    },
+    "net6.0/linux-x64": {
+      "AirModels/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/AirModels.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AirModels.dll": {}
+        }
+      }
     }
   },
   "libraries": {
@@ -32,11 +44,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Programaion\\Proyectos\\ServerApp\\FisrtPlugin\\FisrtPlugin.csproj",
+      "projectUniqueName": "E:\\Proyects\\ServerApp\\FisrtPlugin\\FisrtPlugin.csproj",
       "projectName": "FisrtPlugin",
-      "projectPath": "E:\\Programaion\\Proyectos\\ServerApp\\FisrtPlugin\\FisrtPlugin.csproj",
+      "projectPath": "E:\\Proyects\\ServerApp\\FisrtPlugin\\FisrtPlugin.csproj",
       "packagesPath": "C:\\Users\\JAHC-DeV\\.nuget\\packages\\",
-      "outputPath": "E:\\Programaion\\Proyectos\\ServerApp\\FisrtPlugin\\obj\\",
+      "outputPath": "E:\\Proyects\\ServerApp\\FisrtPlugin\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\JAHC-DeV\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -53,8 +65,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "E:\\Programaion\\Proyectos\\ServerApp\\AirModels\\AirModels.csproj": {
-              "projectPath": "E:\\Programaion\\Proyectos\\ServerApp\\AirModels\\AirModels.csproj"
+            "E:\\Proyects\\ServerApp\\AirModels\\AirModels.csproj": {
+              "projectPath": "E:\\Proyects\\ServerApp\\AirModels\\AirModels.csproj"
             }
           }
         }
@@ -79,12 +91,27 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Runtime.linux-x64",
+            "version": "[6.0.11, 6.0.11]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Runtime.linux-x64",
+            "version": "[6.0.11, 6.0.11]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+      }
+    },
+    "runtimes": {
+      "linux-x64": {
+        "#import": []
       }
     }
   }

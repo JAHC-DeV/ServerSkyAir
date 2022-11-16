@@ -1,0 +1,398 @@
+[Trace]   DarkRiftServer        System Details:
+                                	OS: Microsoft Windows NT 10.0.22000.0
+                                	CLS Version: 6.0.11
+                                	DarkRift: 2.10.1.0
+[Trace]   PluginFactory         Created plugin 'FisrtPlugin'.
+[Trace]   PluginManager         Plugin 'FisrtPlugin' has requested that DarkRift operates in thread safe mode.
+[Trace]   DarkRiftServer        Switched into thread safe mode. All events will be invoked from the main thread. This may affect server performance.
+[Info]    PluginManager         Loaded plugin FisrtPlugin version 1.0
+[Trace]   PluginFactory         Created plugin 'BichannelListener'.
+[Trace]   HttpHealthCheck       HTTP health check started at 'http://localhost:10666/health'
+[Trace]   BadWordFilter         Loading bad word list.
+[Trace]   BadWordFilter         Bad word list loaded sucessfully!
+[Trace]   DarkRiftServer        Binding listeners to ClientManager as server is externally visible.
+[Trace]   RemoteServerManager   No server registry connector configured, skipping registration.
+[Trace]   DefaultNetworkListener Starting bichannel listener.
+[Info]    DefaultNetworkListener Server mounted, listening on port 4296.
+[Trace]   DefaultNetworkListener Accepted TCP connection from 127.0.0.1:12391.
+[Trace]   DefaultNetworkListener Accepted UDP connection from 127.0.0.1:51841.
+[Info]    ClientManager         New client [0] connected [127.0.0.1:12391|127.0.0.1:51841].
+[Trace]   DefaultNetworkListener Accepted TCP connection from 127.0.0.1:12399.
+[Trace]   DefaultNetworkListener Accepted UDP connection from 127.0.0.1:57801.
+[Info]    ClientManager         New client [1] connected [127.0.0.1:12399|127.0.0.1:57801].
+[Warning] ObjectCacheMonitor    184 AutoRecyclingArray objects were finalized last period. This is usually a sign that you are not recycling objects correctly.
+[Warning] ObjectCacheMonitor    2 DarkRiftWriter objects were finalized last period. This is usually a sign that you are not recycling objects correctly.
+[Warning] ObjectCacheMonitor    1 Message objects were finalized last period. This is usually a sign that you are not recycling objects correctly.
+[Warning] ObjectCacheMonitor    186 MessageBuffer objects were finalized last period. This is usually a sign that you are not recycling objects correctly.
+[Warning] ObjectCacheMonitor    384 AutoRecyclingArray objects were finalized last period. This is usually a sign that you are not recycling objects correctly.
+[Warning] ObjectCacheMonitor    387 MessageBuffer objects were finalized last period. This is usually a sign that you are not recycling objects correctly.
+[Warning] ObjectCacheMonitor    324 AutoRecyclingArray objects were finalized last period. This is usually a sign that you are not recycling objects correctly.
+[Warning] ObjectCacheMonitor    325 MessageBuffer objects were finalized last period. This is usually a sign that you are not recycling objects correctly.
+[Warning] ObjectCacheMonitor    402 AutoRecyclingArray objects were finalized last period. This is usually a sign that you are not recycling objects correctly.
+[Warning] ObjectCacheMonitor    402 MessageBuffer objects were finalized last period. This is usually a sign that you are not recycling objects correctly.
+[Warning] ObjectCacheMonitor    9 MessageBuffer objects were finalized last period. This is usually a sign that you are not recycling objects correctly.
+[Warning] ObjectCacheMonitor    655 AutoRecyclingArray objects were finalized last period. This is usually a sign that you are not recycling objects correctly.
+[Warning] ObjectCacheMonitor    339 MessageBuffer objects were finalized last period. This is usually a sign that you are not recycling objects correctly.
+[Warning] ObjectCacheMonitor    340 AutoRecyclingArray objects were finalized last period. This is usually a sign that you are not recycling objects correctly.
+[Warning] ObjectCacheMonitor    340 MessageBuffer objects were finalized last period. This is usually a sign that you are not recycling objects correctly.
+[Warning] ObjectCacheMonitor    339 AutoRecyclingArray objects were finalized last period. This is usually a sign that you are not recycling objects correctly.
+[Warning] ObjectCacheMonitor    339 MessageBuffer objects were finalized last period. This is usually a sign that you are not recycling objects correctly.
+[Warning] ObjectCacheMonitor    350 AutoRecyclingArray objects were finalized last period. This is usually a sign that you are not recycling objects correctly.
+[Warning] ObjectCacheMonitor    350 MessageBuffer objects were finalized last period. This is usually a sign that you are not recycling objects correctly.
+[Warning] ObjectCacheMonitor    326 AutoRecyclingArray objects were finalized last period. This is usually a sign that you are not recycling objects correctly.
+[Warning] ObjectCacheMonitor    326 MessageBuffer objects were finalized last period. This is usually a sign that you are not recycling objects correctly.
+[Warning] ObjectCacheMonitor    361 AutoRecyclingArray objects were finalized last period. This is usually a sign that you are not recycling objects correctly.
+[Warning] ObjectCacheMonitor    360 MessageBuffer objects were finalized last period. This is usually a sign that you are not recycling objects correctly.
+[Warning] ObjectCacheMonitor    342 AutoRecyclingArray objects were finalized last period. This is usually a sign that you are not recycling objects correctly.
+[Warning] ObjectCacheMonitor    343 MessageBuffer objects were finalized last period. This is usually a sign that you are not recycling objects correctly.
+[Warning] ObjectCacheMonitor    333 AutoRecyclingArray objects were finalized last period. This is usually a sign that you are not recycling objects correctly.
+[Warning] ObjectCacheMonitor    333 MessageBuffer objects were finalized last period. This is usually a sign that you are not recycling objects correctly.
+[Warning] ObjectCacheMonitor    346 AutoRecyclingArray objects were finalized last period. This is usually a sign that you are not recycling objects correctly.
+[Warning] ObjectCacheMonitor    346 MessageBuffer objects were finalized last period. This is usually a sign that you are not recycling objects correctly.
+[Warning] ObjectCacheMonitor    345 AutoRecyclingArray objects were finalized last period. This is usually a sign that you are not recycling objects correctly.
+[Warning] ObjectCacheMonitor    345 MessageBuffer objects were finalized last period. This is usually a sign that you are not recycling objects correctly.
+[Warning] ObjectCacheMonitor    347 AutoRecyclingArray objects were finalized last period. This is usually a sign that you are not recycling objects correctly.
+[Warning] ObjectCacheMonitor    347 MessageBuffer objects were finalized last period. This is usually a sign that you are not recycling objects correctly.
+[Warning] ObjectCacheMonitor    346 AutoRecyclingArray objects were finalized last period. This is usually a sign that you are not recycling objects correctly.
+[Warning] ObjectCacheMonitor    346 MessageBuffer objects were finalized last period. This is usually a sign that you are not recycling objects correctly.
+[Warning] ObjectCacheMonitor    347 AutoRecyclingArray objects were finalized last period. This is usually a sign that you are not recycling objects correctly.
+[Warning] ObjectCacheMonitor    346 MessageBuffer objects were finalized last period. This is usually a sign that you are not recycling objects correctly.
+[Info]    ClientManager         Client [0] disconnected.
+[Error]   Client                A plugin encountered an error whilst handling the MessageReceived event.
+                                 System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+                                    at System.Collections.Generic.List`1.set_Item(Int32 index, T value)
+                                    at FisrtPlugin.FisrtPlugin.UpdatePlayerInfoToSend(PlayerData playerData)
+                                    at FisrtPlugin.FisrtPlugin.NewGlobal_MessageReceived(Object sender, MessageReceivedEventArgs e)
+                                    at DarkRift.Server.Client.<>c__DisplayClass56_0.<HandleIncomingMessage>g__DoMessageReceived|0() in C:\Users\JAHC-DeV\Desktop\DarkRift-master\DarkRift.Server\Client.cs:line 332
+[Error]   Client                A plugin encountered an error whilst handling the MessageReceived event.
+                                 System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+                                    at System.Collections.Generic.List`1.set_Item(Int32 index, T value)
+                                    at FisrtPlugin.FisrtPlugin.UpdatePlayerInfoToSend(PlayerData playerData)
+                                    at FisrtPlugin.FisrtPlugin.NewGlobal_MessageReceived(Object sender, MessageReceivedEventArgs e)
+                                    at DarkRift.Server.Client.<>c__DisplayClass56_0.<HandleIncomingMessage>g__DoMessageReceived|0() in C:\Users\JAHC-DeV\Desktop\DarkRift-master\DarkRift.Server\Client.cs:line 332
+[Error]   Client                A plugin encountered an error whilst handling the MessageReceived event.
+                                 System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+                                    at System.Collections.Generic.List`1.set_Item(Int32 index, T value)
+                                    at FisrtPlugin.FisrtPlugin.UpdatePlayerInfoToSend(PlayerData playerData)
+                                    at FisrtPlugin.FisrtPlugin.NewGlobal_MessageReceived(Object sender, MessageReceivedEventArgs e)
+                                    at DarkRift.Server.Client.<>c__DisplayClass56_0.<HandleIncomingMessage>g__DoMessageReceived|0() in C:\Users\JAHC-DeV\Desktop\DarkRift-master\DarkRift.Server\Client.cs:line 332
+[Error]   Client                A plugin encountered an error whilst handling the MessageReceived event.
+                                 System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+                                    at System.Collections.Generic.List`1.set_Item(Int32 index, T value)
+                                    at FisrtPlugin.FisrtPlugin.UpdatePlayerInfoToSend(PlayerData playerData)
+                                    at FisrtPlugin.FisrtPlugin.NewGlobal_MessageReceived(Object sender, MessageReceivedEventArgs e)
+                                    at DarkRift.Server.Client.<>c__DisplayClass56_0.<HandleIncomingMessage>g__DoMessageReceived|0() in C:\Users\JAHC-DeV\Desktop\DarkRift-master\DarkRift.Server\Client.cs:line 332
+[Error]   Client                A plugin encountered an error whilst handling the MessageReceived event.
+                                 System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+                                    at System.Collections.Generic.List`1.set_Item(Int32 index, T value)
+                                    at FisrtPlugin.FisrtPlugin.UpdatePlayerInfoToSend(PlayerData playerData)
+                                    at FisrtPlugin.FisrtPlugin.NewGlobal_MessageReceived(Object sender, MessageReceivedEventArgs e)
+                                    at DarkRift.Server.Client.<>c__DisplayClass56_0.<HandleIncomingMessage>g__DoMessageReceived|0() in C:\Users\JAHC-DeV\Desktop\DarkRift-master\DarkRift.Server\Client.cs:line 332
+[Error]   Client                A plugin encountered an error whilst handling the MessageReceived event.
+                                 System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+                                    at System.Collections.Generic.List`1.set_Item(Int32 index, T value)
+                                    at FisrtPlugin.FisrtPlugin.UpdatePlayerInfoToSend(PlayerData playerData)
+                                    at FisrtPlugin.FisrtPlugin.NewGlobal_MessageReceived(Object sender, MessageReceivedEventArgs e)
+                                    at DarkRift.Server.Client.<>c__DisplayClass56_0.<HandleIncomingMessage>g__DoMessageReceived|0() in C:\Users\JAHC-DeV\Desktop\DarkRift-master\DarkRift.Server\Client.cs:line 332
+[Error]   Client                A plugin encountered an error whilst handling the MessageReceived event.
+                                 System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+                                    at System.Collections.Generic.List`1.set_Item(Int32 index, T value)
+                                    at FisrtPlugin.FisrtPlugin.UpdatePlayerInfoToSend(PlayerData playerData)
+                                    at FisrtPlugin.FisrtPlugin.NewGlobal_MessageReceived(Object sender, MessageReceivedEventArgs e)
+                                    at DarkRift.Server.Client.<>c__DisplayClass56_0.<HandleIncomingMessage>g__DoMessageReceived|0() in C:\Users\JAHC-DeV\Desktop\DarkRift-master\DarkRift.Server\Client.cs:line 332
+[Error]   Client                A plugin encountered an error whilst handling the MessageReceived event.
+                                 System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+                                    at System.Collections.Generic.List`1.set_Item(Int32 index, T value)
+                                    at FisrtPlugin.FisrtPlugin.UpdatePlayerInfoToSend(PlayerData playerData)
+                                    at FisrtPlugin.FisrtPlugin.NewGlobal_MessageReceived(Object sender, MessageReceivedEventArgs e)
+                                    at DarkRift.Server.Client.<>c__DisplayClass56_0.<HandleIncomingMessage>g__DoMessageReceived|0() in C:\Users\JAHC-DeV\Desktop\DarkRift-master\DarkRift.Server\Client.cs:line 332
+[Error]   Client                A plugin encountered an error whilst handling the MessageReceived event.
+                                 System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+                                    at System.Collections.Generic.List`1.set_Item(Int32 index, T value)
+                                    at FisrtPlugin.FisrtPlugin.UpdatePlayerInfoToSend(PlayerData playerData)
+                                    at FisrtPlugin.FisrtPlugin.NewGlobal_MessageReceived(Object sender, MessageReceivedEventArgs e)
+                                    at DarkRift.Server.Client.<>c__DisplayClass56_0.<HandleIncomingMessage>g__DoMessageReceived|0() in C:\Users\JAHC-DeV\Desktop\DarkRift-master\DarkRift.Server\Client.cs:line 332
+[Error]   Client                A plugin encountered an error whilst handling the MessageReceived event.
+                                 System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+                                    at System.Collections.Generic.List`1.set_Item(Int32 index, T value)
+                                    at FisrtPlugin.FisrtPlugin.UpdatePlayerInfoToSend(PlayerData playerData)
+                                    at FisrtPlugin.FisrtPlugin.NewGlobal_MessageReceived(Object sender, MessageReceivedEventArgs e)
+                                    at DarkRift.Server.Client.<>c__DisplayClass56_0.<HandleIncomingMessage>g__DoMessageReceived|0() in C:\Users\JAHC-DeV\Desktop\DarkRift-master\DarkRift.Server\Client.cs:line 332
+[Error]   Client                A plugin encountered an error whilst handling the MessageReceived event.
+                                 System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+                                    at System.Collections.Generic.List`1.set_Item(Int32 index, T value)
+                                    at FisrtPlugin.FisrtPlugin.UpdatePlayerInfoToSend(PlayerData playerData)
+                                    at FisrtPlugin.FisrtPlugin.NewGlobal_MessageReceived(Object sender, MessageReceivedEventArgs e)
+                                    at DarkRift.Server.Client.<>c__DisplayClass56_0.<HandleIncomingMessage>g__DoMessageReceived|0() in C:\Users\JAHC-DeV\Desktop\DarkRift-master\DarkRift.Server\Client.cs:line 332
+[Error]   Client                A plugin encountered an error whilst handling the MessageReceived event.
+                                 System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+                                    at System.Collections.Generic.List`1.set_Item(Int32 index, T value)
+                                    at FisrtPlugin.FisrtPlugin.UpdatePlayerInfoToSend(PlayerData playerData)
+                                    at FisrtPlugin.FisrtPlugin.NewGlobal_MessageReceived(Object sender, MessageReceivedEventArgs e)
+                                    at DarkRift.Server.Client.<>c__DisplayClass56_0.<HandleIncomingMessage>g__DoMessageReceived|0() in C:\Users\JAHC-DeV\Desktop\DarkRift-master\DarkRift.Server\Client.cs:line 332
+[Error]   Client                A plugin encountered an error whilst handling the MessageReceived event.
+                                 System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+                                    at System.Collections.Generic.List`1.set_Item(Int32 index, T value)
+                                    at FisrtPlugin.FisrtPlugin.UpdatePlayerInfoToSend(PlayerData playerData)
+                                    at FisrtPlugin.FisrtPlugin.NewGlobal_MessageReceived(Object sender, MessageReceivedEventArgs e)
+                                    at DarkRift.Server.Client.<>c__DisplayClass56_0.<HandleIncomingMessage>g__DoMessageReceived|0() in C:\Users\JAHC-DeV\Desktop\DarkRift-master\DarkRift.Server\Client.cs:line 332
+[Error]   Client                A plugin encountered an error whilst handling the MessageReceived event.
+                                 System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+                                    at System.Collections.Generic.List`1.set_Item(Int32 index, T value)
+                                    at FisrtPlugin.FisrtPlugin.UpdatePlayerInfoToSend(PlayerData playerData)
+                                    at FisrtPlugin.FisrtPlugin.NewGlobal_MessageReceived(Object sender, MessageReceivedEventArgs e)
+                                    at DarkRift.Server.Client.<>c__DisplayClass56_0.<HandleIncomingMessage>g__DoMessageReceived|0() in C:\Users\JAHC-DeV\Desktop\DarkRift-master\DarkRift.Server\Client.cs:line 332
+[Error]   Client                A plugin encountered an error whilst handling the MessageReceived event.
+                                 System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+                                    at System.Collections.Generic.List`1.set_Item(Int32 index, T value)
+                                    at FisrtPlugin.FisrtPlugin.UpdatePlayerInfoToSend(PlayerData playerData)
+                                    at FisrtPlugin.FisrtPlugin.NewGlobal_MessageReceived(Object sender, MessageReceivedEventArgs e)
+                                    at DarkRift.Server.Client.<>c__DisplayClass56_0.<HandleIncomingMessage>g__DoMessageReceived|0() in C:\Users\JAHC-DeV\Desktop\DarkRift-master\DarkRift.Server\Client.cs:line 332
+[Error]   Client                A plugin encountered an error whilst handling the MessageReceived event.
+                                 System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+                                    at System.Collections.Generic.List`1.set_Item(Int32 index, T value)
+                                    at FisrtPlugin.FisrtPlugin.UpdatePlayerInfoToSend(PlayerData playerData)
+                                    at FisrtPlugin.FisrtPlugin.NewGlobal_MessageReceived(Object sender, MessageReceivedEventArgs e)
+                                    at DarkRift.Server.Client.<>c__DisplayClass56_0.<HandleIncomingMessage>g__DoMessageReceived|0() in C:\Users\JAHC-DeV\Desktop\DarkRift-master\DarkRift.Server\Client.cs:line 332
+[Error]   Client                A plugin encountered an error whilst handling the MessageReceived event.
+                                 System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+                                    at System.Collections.Generic.List`1.set_Item(Int32 index, T value)
+                                    at FisrtPlugin.FisrtPlugin.UpdatePlayerInfoToSend(PlayerData playerData)
+                                    at FisrtPlugin.FisrtPlugin.NewGlobal_MessageReceived(Object sender, MessageReceivedEventArgs e)
+                                    at DarkRift.Server.Client.<>c__DisplayClass56_0.<HandleIncomingMessage>g__DoMessageReceived|0() in C:\Users\JAHC-DeV\Desktop\DarkRift-master\DarkRift.Server\Client.cs:line 332
+[Error]   Client                A plugin encountered an error whilst handling the MessageReceived event.
+                                 System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+                                    at System.Collections.Generic.List`1.set_Item(Int32 index, T value)
+                                    at FisrtPlugin.FisrtPlugin.UpdatePlayerInfoToSend(PlayerData playerData)
+                                    at FisrtPlugin.FisrtPlugin.NewGlobal_MessageReceived(Object sender, MessageReceivedEventArgs e)
+                                    at DarkRift.Server.Client.<>c__DisplayClass56_0.<HandleIncomingMessage>g__DoMessageReceived|0() in C:\Users\JAHC-DeV\Desktop\DarkRift-master\DarkRift.Server\Client.cs:line 332
+[Error]   Client                A plugin encountered an error whilst handling the MessageReceived event.
+                                 System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+                                    at System.Collections.Generic.List`1.set_Item(Int32 index, T value)
+                                    at FisrtPlugin.FisrtPlugin.UpdatePlayerInfoToSend(PlayerData playerData)
+                                    at FisrtPlugin.FisrtPlugin.NewGlobal_MessageReceived(Object sender, MessageReceivedEventArgs e)
+                                    at DarkRift.Server.Client.<>c__DisplayClass56_0.<HandleIncomingMessage>g__DoMessageReceived|0() in C:\Users\JAHC-DeV\Desktop\DarkRift-master\DarkRift.Server\Client.cs:line 332
+[Error]   Client                A plugin encountered an error whilst handling the MessageReceived event.
+                                 System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+                                    at System.Collections.Generic.List`1.set_Item(Int32 index, T value)
+                                    at FisrtPlugin.FisrtPlugin.UpdatePlayerInfoToSend(PlayerData playerData)
+                                    at FisrtPlugin.FisrtPlugin.NewGlobal_MessageReceived(Object sender, MessageReceivedEventArgs e)
+                                    at DarkRift.Server.Client.<>c__DisplayClass56_0.<HandleIncomingMessage>g__DoMessageReceived|0() in C:\Users\JAHC-DeV\Desktop\DarkRift-master\DarkRift.Server\Client.cs:line 332
+[Error]   Client                A plugin encountered an error whilst handling the MessageReceived event.
+                                 System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+                                    at System.Collections.Generic.List`1.set_Item(Int32 index, T value)
+                                    at FisrtPlugin.FisrtPlugin.UpdatePlayerInfoToSend(PlayerData playerData)
+                                    at FisrtPlugin.FisrtPlugin.NewGlobal_MessageReceived(Object sender, MessageReceivedEventArgs e)
+                                    at DarkRift.Server.Client.<>c__DisplayClass56_0.<HandleIncomingMessage>g__DoMessageReceived|0() in C:\Users\JAHC-DeV\Desktop\DarkRift-master\DarkRift.Server\Client.cs:line 332
+[Error]   Client                A plugin encountered an error whilst handling the MessageReceived event.
+                                 System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+                                    at System.Collections.Generic.List`1.set_Item(Int32 index, T value)
+                                    at FisrtPlugin.FisrtPlugin.UpdatePlayerInfoToSend(PlayerData playerData)
+                                    at FisrtPlugin.FisrtPlugin.NewGlobal_MessageReceived(Object sender, MessageReceivedEventArgs e)
+                                    at DarkRift.Server.Client.<>c__DisplayClass56_0.<HandleIncomingMessage>g__DoMessageReceived|0() in C:\Users\JAHC-DeV\Desktop\DarkRift-master\DarkRift.Server\Client.cs:line 332
+[Error]   Client                A plugin encountered an error whilst handling the MessageReceived event.
+                                 System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+                                    at System.Collections.Generic.List`1.set_Item(Int32 index, T value)
+                                    at FisrtPlugin.FisrtPlugin.UpdatePlayerInfoToSend(PlayerData playerData)
+                                    at FisrtPlugin.FisrtPlugin.NewGlobal_MessageReceived(Object sender, MessageReceivedEventArgs e)
+                                    at DarkRift.Server.Client.<>c__DisplayClass56_0.<HandleIncomingMessage>g__DoMessageReceived|0() in C:\Users\JAHC-DeV\Desktop\DarkRift-master\DarkRift.Server\Client.cs:line 332
+[Error]   Client                A plugin encountered an error whilst handling the MessageReceived event.
+                                 System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+                                    at System.Collections.Generic.List`1.set_Item(Int32 index, T value)
+                                    at FisrtPlugin.FisrtPlugin.UpdatePlayerInfoToSend(PlayerData playerData)
+                                    at FisrtPlugin.FisrtPlugin.NewGlobal_MessageReceived(Object sender, MessageReceivedEventArgs e)
+                                    at DarkRift.Server.Client.<>c__DisplayClass56_0.<HandleIncomingMessage>g__DoMessageReceived|0() in C:\Users\JAHC-DeV\Desktop\DarkRift-master\DarkRift.Server\Client.cs:line 332
+[Error]   Client                A plugin encountered an error whilst handling the MessageReceived event.
+                                 System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+                                    at System.Collections.Generic.List`1.set_Item(Int32 index, T value)
+                                    at FisrtPlugin.FisrtPlugin.UpdatePlayerInfoToSend(PlayerData playerData)
+                                    at FisrtPlugin.FisrtPlugin.NewGlobal_MessageReceived(Object sender, MessageReceivedEventArgs e)
+                                    at DarkRift.Server.Client.<>c__DisplayClass56_0.<HandleIncomingMessage>g__DoMessageReceived|0() in C:\Users\JAHC-DeV\Desktop\DarkRift-master\DarkRift.Server\Client.cs:line 332
+[Error]   Client                A plugin encountered an error whilst handling the MessageReceived event.
+                                 System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+                                    at System.Collections.Generic.List`1.set_Item(Int32 index, T value)
+                                    at FisrtPlugin.FisrtPlugin.UpdatePlayerInfoToSend(PlayerData playerData)
+                                    at FisrtPlugin.FisrtPlugin.NewGlobal_MessageReceived(Object sender, MessageReceivedEventArgs e)
+                                    at DarkRift.Server.Client.<>c__DisplayClass56_0.<HandleIncomingMessage>g__DoMessageReceived|0() in C:\Users\JAHC-DeV\Desktop\DarkRift-master\DarkRift.Server\Client.cs:line 332
+[Error]   Client                A plugin encountered an error whilst handling the MessageReceived event.
+                                 System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+                                    at System.Collections.Generic.List`1.set_Item(Int32 index, T value)
+                                    at FisrtPlugin.FisrtPlugin.UpdatePlayerInfoToSend(PlayerData playerData)
+                                    at FisrtPlugin.FisrtPlugin.NewGlobal_MessageReceived(Object sender, MessageReceivedEventArgs e)
+                                    at DarkRift.Server.Client.<>c__DisplayClass56_0.<HandleIncomingMessage>g__DoMessageReceived|0() in C:\Users\JAHC-DeV\Desktop\DarkRift-master\DarkRift.Server\Client.cs:line 332
+[Error]   Client                A plugin encountered an error whilst handling the MessageReceived event.
+                                 System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+                                    at System.Collections.Generic.List`1.set_Item(Int32 index, T value)
+                                    at FisrtPlugin.FisrtPlugin.UpdatePlayerInfoToSend(PlayerData playerData)
+                                    at FisrtPlugin.FisrtPlugin.NewGlobal_MessageReceived(Object sender, MessageReceivedEventArgs e)
+                                    at DarkRift.Server.Client.<>c__DisplayClass56_0.<HandleIncomingMessage>g__DoMessageReceived|0() in C:\Users\JAHC-DeV\Desktop\DarkRift-master\DarkRift.Server\Client.cs:line 332
+[Error]   Client                A plugin encountered an error whilst handling the MessageReceived event.
+                                 System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+                                    at System.Collections.Generic.List`1.set_Item(Int32 index, T value)
+                                    at FisrtPlugin.FisrtPlugin.UpdatePlayerInfoToSend(PlayerData playerData)
+                                    at FisrtPlugin.FisrtPlugin.NewGlobal_MessageReceived(Object sender, MessageReceivedEventArgs e)
+                                    at DarkRift.Server.Client.<>c__DisplayClass56_0.<HandleIncomingMessage>g__DoMessageReceived|0() in C:\Users\JAHC-DeV\Desktop\DarkRift-master\DarkRift.Server\Client.cs:line 332
+[Error]   Client                A plugin encountered an error whilst handling the MessageReceived event.
+                                 System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+                                    at System.Collections.Generic.List`1.set_Item(Int32 index, T value)
+                                    at FisrtPlugin.FisrtPlugin.UpdatePlayerInfoToSend(PlayerData playerData)
+                                    at FisrtPlugin.FisrtPlugin.NewGlobal_MessageReceived(Object sender, MessageReceivedEventArgs e)
+                                    at DarkRift.Server.Client.<>c__DisplayClass56_0.<HandleIncomingMessage>g__DoMessageReceived|0() in C:\Users\JAHC-DeV\Desktop\DarkRift-master\DarkRift.Server\Client.cs:line 332
+[Error]   Client                A plugin encountered an error whilst handling the MessageReceived event.
+                                 System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+                                    at System.Collections.Generic.List`1.set_Item(Int32 index, T value)
+                                    at FisrtPlugin.FisrtPlugin.UpdatePlayerInfoToSend(PlayerData playerData)
+                                    at FisrtPlugin.FisrtPlugin.NewGlobal_MessageReceived(Object sender, MessageReceivedEventArgs e)
+                                    at DarkRift.Server.Client.<>c__DisplayClass56_0.<HandleIncomingMessage>g__DoMessageReceived|0() in C:\Users\JAHC-DeV\Desktop\DarkRift-master\DarkRift.Server\Client.cs:line 332
+[Error]   Client                A plugin encountered an error whilst handling the MessageReceived event.
+                                 System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+                                    at System.Collections.Generic.List`1.set_Item(Int32 index, T value)
+                                    at FisrtPlugin.FisrtPlugin.UpdatePlayerInfoToSend(PlayerData playerData)
+                                    at FisrtPlugin.FisrtPlugin.NewGlobal_MessageReceived(Object sender, MessageReceivedEventArgs e)
+                                    at DarkRift.Server.Client.<>c__DisplayClass56_0.<HandleIncomingMessage>g__DoMessageReceived|0() in C:\Users\JAHC-DeV\Desktop\DarkRift-master\DarkRift.Server\Client.cs:line 332
+[Error]   Client                A plugin encountered an error whilst handling the MessageReceived event.
+                                 System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+                                    at System.Collections.Generic.List`1.set_Item(Int32 index, T value)
+                                    at FisrtPlugin.FisrtPlugin.UpdatePlayerInfoToSend(PlayerData playerData)
+                                    at FisrtPlugin.FisrtPlugin.NewGlobal_MessageReceived(Object sender, MessageReceivedEventArgs e)
+                                    at DarkRift.Server.Client.<>c__DisplayClass56_0.<HandleIncomingMessage>g__DoMessageReceived|0() in C:\Users\JAHC-DeV\Desktop\DarkRift-master\DarkRift.Server\Client.cs:line 332
+[Error]   Client                A plugin encountered an error whilst handling the MessageReceived event.
+                                 System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+                                    at System.Collections.Generic.List`1.set_Item(Int32 index, T value)
+                                    at FisrtPlugin.FisrtPlugin.UpdatePlayerInfoToSend(PlayerData playerData)
+                                    at FisrtPlugin.FisrtPlugin.NewGlobal_MessageReceived(Object sender, MessageReceivedEventArgs e)
+                                    at DarkRift.Server.Client.<>c__DisplayClass56_0.<HandleIncomingMessage>g__DoMessageReceived|0() in C:\Users\JAHC-DeV\Desktop\DarkRift-master\DarkRift.Server\Client.cs:line 332
+[Error]   Client                A plugin encountered an error whilst handling the MessageReceived event.
+                                 System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+                                    at System.Collections.Generic.List`1.set_Item(Int32 index, T value)
+                                    at FisrtPlugin.FisrtPlugin.UpdatePlayerInfoToSend(PlayerData playerData)
+                                    at FisrtPlugin.FisrtPlugin.NewGlobal_MessageReceived(Object sender, MessageReceivedEventArgs e)
+                                    at DarkRift.Server.Client.<>c__DisplayClass56_0.<HandleIncomingMessage>g__DoMessageReceived|0() in C:\Users\JAHC-DeV\Desktop\DarkRift-master\DarkRift.Server\Client.cs:line 332
+[Error]   Client                A plugin encountered an error whilst handling the MessageReceived event.
+                                 System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+                                    at System.Collections.Generic.List`1.set_Item(Int32 index, T value)
+                                    at FisrtPlugin.FisrtPlugin.UpdatePlayerInfoToSend(PlayerData playerData)
+                                    at FisrtPlugin.FisrtPlugin.NewGlobal_MessageReceived(Object sender, MessageReceivedEventArgs e)
+                                    at DarkRift.Server.Client.<>c__DisplayClass56_0.<HandleIncomingMessage>g__DoMessageReceived|0() in C:\Users\JAHC-DeV\Desktop\DarkRift-master\DarkRift.Server\Client.cs:line 332
+[Error]   Client                A plugin encountered an error whilst handling the MessageReceived event.
+                                 System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+                                    at System.Collections.Generic.List`1.set_Item(Int32 index, T value)
+                                    at FisrtPlugin.FisrtPlugin.UpdatePlayerInfoToSend(PlayerData playerData)
+                                    at FisrtPlugin.FisrtPlugin.NewGlobal_MessageReceived(Object sender, MessageReceivedEventArgs e)
+                                    at DarkRift.Server.Client.<>c__DisplayClass56_0.<HandleIncomingMessage>g__DoMessageReceived|0() in C:\Users\JAHC-DeV\Desktop\DarkRift-master\DarkRift.Server\Client.cs:line 332
+[Error]   Client                A plugin encountered an error whilst handling the MessageReceived event.
+                                 System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+                                    at System.Collections.Generic.List`1.set_Item(Int32 index, T value)
+                                    at FisrtPlugin.FisrtPlugin.UpdatePlayerInfoToSend(PlayerData playerData)
+                                    at FisrtPlugin.FisrtPlugin.NewGlobal_MessageReceived(Object sender, MessageReceivedEventArgs e)
+                                    at DarkRift.Server.Client.<>c__DisplayClass56_0.<HandleIncomingMessage>g__DoMessageReceived|0() in C:\Users\JAHC-DeV\Desktop\DarkRift-master\DarkRift.Server\Client.cs:line 332
+[Error]   Client                A plugin encountered an error whilst handling the MessageReceived event.
+                                 System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+                                    at System.Collections.Generic.List`1.set_Item(Int32 index, T value)
+                                    at FisrtPlugin.FisrtPlugin.UpdatePlayerInfoToSend(PlayerData playerData)
+                                    at FisrtPlugin.FisrtPlugin.NewGlobal_MessageReceived(Object sender, MessageReceivedEventArgs e)
+                                    at DarkRift.Server.Client.<>c__DisplayClass56_0.<HandleIncomingMessage>g__DoMessageReceived|0() in C:\Users\JAHC-DeV\Desktop\DarkRift-master\DarkRift.Server\Client.cs:line 332
+[Error]   Client                A plugin encountered an error whilst handling the MessageReceived event.
+                                 System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+                                    at System.Collections.Generic.List`1.set_Item(Int32 index, T value)
+                                    at FisrtPlugin.FisrtPlugin.UpdatePlayerInfoToSend(PlayerData playerData)
+                                    at FisrtPlugin.FisrtPlugin.NewGlobal_MessageReceived(Object sender, MessageReceivedEventArgs e)
+                                    at DarkRift.Server.Client.<>c__DisplayClass56_0.<HandleIncomingMessage>g__DoMessageReceived|0() in C:\Users\JAHC-DeV\Desktop\DarkRift-master\DarkRift.Server\Client.cs:line 332
+[Error]   Client                A plugin encountered an error whilst handling the MessageReceived event.
+                                 System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+                                    at System.Collections.Generic.List`1.set_Item(Int32 index, T value)
+                                    at FisrtPlugin.FisrtPlugin.UpdatePlayerInfoToSend(PlayerData playerData)
+                                    at FisrtPlugin.FisrtPlugin.NewGlobal_MessageReceived(Object sender, MessageReceivedEventArgs e)
+                                    at DarkRift.Server.Client.<>c__DisplayClass56_0.<HandleIncomingMessage>g__DoMessageReceived|0() in C:\Users\JAHC-DeV\Desktop\DarkRift-master\DarkRift.Server\Client.cs:line 332
+[Error]   Client                A plugin encountered an error whilst handling the MessageReceived event.
+                                 System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+                                    at System.Collections.Generic.List`1.set_Item(Int32 index, T value)
+                                    at FisrtPlugin.FisrtPlugin.UpdatePlayerInfoToSend(PlayerData playerData)
+                                    at FisrtPlugin.FisrtPlugin.NewGlobal_MessageReceived(Object sender, MessageReceivedEventArgs e)
+                                    at DarkRift.Server.Client.<>c__DisplayClass56_0.<HandleIncomingMessage>g__DoMessageReceived|0() in C:\Users\JAHC-DeV\Desktop\DarkRift-master\DarkRift.Server\Client.cs:line 332
+[Error]   Client                A plugin encountered an error whilst handling the MessageReceived event.
+                                 System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+                                    at System.Collections.Generic.List`1.set_Item(Int32 index, T value)
+                                    at FisrtPlugin.FisrtPlugin.UpdatePlayerInfoToSend(PlayerData playerData)
+                                    at FisrtPlugin.FisrtPlugin.NewGlobal_MessageReceived(Object sender, MessageReceivedEventArgs e)
+                                    at DarkRift.Server.Client.<>c__DisplayClass56_0.<HandleIncomingMessage>g__DoMessageReceived|0() in C:\Users\JAHC-DeV\Desktop\DarkRift-master\DarkRift.Server\Client.cs:line 332
+[Error]   Client                A plugin encountered an error whilst handling the MessageReceived event.
+                                 System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+                                    at System.Collections.Generic.List`1.set_Item(Int32 index, T value)
+                                    at FisrtPlugin.FisrtPlugin.UpdatePlayerInfoToSend(PlayerData playerData)
+                                    at FisrtPlugin.FisrtPlugin.NewGlobal_MessageReceived(Object sender, MessageReceivedEventArgs e)
+                                    at DarkRift.Server.Client.<>c__DisplayClass56_0.<HandleIncomingMessage>g__DoMessageReceived|0() in C:\Users\JAHC-DeV\Desktop\DarkRift-master\DarkRift.Server\Client.cs:line 332
+[Warning] ObjectCacheMonitor    2 MessageBuffer objects were finalized last period. This is usually a sign that you are not recycling objects correctly.
+[Error]   Client                A plugin encountered an error whilst handling the MessageReceived event.
+                                 System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+                                    at System.Collections.Generic.List`1.set_Item(Int32 index, T value)
+                                    at FisrtPlugin.FisrtPlugin.UpdatePlayerInfoToSend(PlayerData playerData)
+                                    at FisrtPlugin.FisrtPlugin.NewGlobal_MessageReceived(Object sender, MessageReceivedEventArgs e)
+                                    at DarkRift.Server.Client.<>c__DisplayClass56_0.<HandleIncomingMessage>g__DoMessageReceived|0() in C:\Users\JAHC-DeV\Desktop\DarkRift-master\DarkRift.Server\Client.cs:line 332
+[Error]   Client                A plugin encountered an error whilst handling the MessageReceived event.
+                                 System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+                                    at System.Collections.Generic.List`1.set_Item(Int32 index, T value)
+                                    at FisrtPlugin.FisrtPlugin.UpdatePlayerInfoToSend(PlayerData playerData)
+                                    at FisrtPlugin.FisrtPlugin.NewGlobal_MessageReceived(Object sender, MessageReceivedEventArgs e)
+                                    at DarkRift.Server.Client.<>c__DisplayClass56_0.<HandleIncomingMessage>g__DoMessageReceived|0() in C:\Users\JAHC-DeV\Desktop\DarkRift-master\DarkRift.Server\Client.cs:line 332
+[Error]   Client                A plugin encountered an error whilst handling the MessageReceived event.
+                                 System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+                                    at System.Collections.Generic.List`1.set_Item(Int32 index, T value)
+                                    at FisrtPlugin.FisrtPlugin.UpdatePlayerInfoToSend(PlayerData playerData)
+                                    at FisrtPlugin.FisrtPlugin.NewGlobal_MessageReceived(Object sender, MessageReceivedEventArgs e)
+                                    at DarkRift.Server.Client.<>c__DisplayClass56_0.<HandleIncomingMessage>g__DoMessageReceived|0() in C:\Users\JAHC-DeV\Desktop\DarkRift-master\DarkRift.Server\Client.cs:line 332
+[Error]   Client                A plugin encountered an error whilst handling the MessageReceived event.
+                                 System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+                                    at System.Collections.Generic.List`1.set_Item(Int32 index, T value)
+                                    at FisrtPlugin.FisrtPlugin.UpdatePlayerInfoToSend(PlayerData playerData)
+                                    at FisrtPlugin.FisrtPlugin.NewGlobal_MessageReceived(Object sender, MessageReceivedEventArgs e)
+                                    at DarkRift.Server.Client.<>c__DisplayClass56_0.<HandleIncomingMessage>g__DoMessageReceived|0() in C:\Users\JAHC-DeV\Desktop\DarkRift-master\DarkRift.Server\Client.cs:line 332
+[Error]   Client                A plugin encountered an error whilst handling the MessageReceived event.
+                                 System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+                                    at System.Collections.Generic.List`1.set_Item(Int32 index, T value)
+                                    at FisrtPlugin.FisrtPlugin.UpdatePlayerInfoToSend(PlayerData playerData)
+                                    at FisrtPlugin.FisrtPlugin.NewGlobal_MessageReceived(Object sender, MessageReceivedEventArgs e)
+                                    at DarkRift.Server.Client.<>c__DisplayClass56_0.<HandleIncomingMessage>g__DoMessageReceived|0() in C:\Users\JAHC-DeV\Desktop\DarkRift-master\DarkRift.Server\Client.cs:line 332
+[Error]   Client                A plugin encountered an error whilst handling the MessageReceived event.
+                                 System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+                                    at System.Collections.Generic.List`1.set_Item(Int32 index, T value)
+                                    at FisrtPlugin.FisrtPlugin.UpdatePlayerInfoToSend(PlayerData playerData)
+                                    at FisrtPlugin.FisrtPlugin.NewGlobal_MessageReceived(Object sender, MessageReceivedEventArgs e)
+                                    at DarkRift.Server.Client.<>c__DisplayClass56_0.<HandleIncomingMessage>g__DoMessageReceived|0() in C:\Users\JAHC-DeV\Desktop\DarkRift-master\DarkRift.Server\Client.cs:line 332
+[Error]   Client                A plugin encountered an error whilst handling the MessageReceived event.
+                                 System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+                                    at System.Collections.Generic.List`1.set_Item(Int32 index, T value)
+                                    at FisrtPlugin.FisrtPlugin.UpdatePlayerInfoToSend(PlayerData playerData)
+                                    at FisrtPlugin.FisrtPlugin.NewGlobal_MessageReceived(Object sender, MessageReceivedEventArgs e)
+                                    at DarkRift.Server.Client.<>c__DisplayClass56_0.<HandleIncomingMessage>g__DoMessageReceived|0() in C:\Users\JAHC-DeV\Desktop\DarkRift-master\DarkRift.Server\Client.cs:line 332
+[Error]   Client                A plugin encountered an error whilst handling the MessageReceived event.
+                                 System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+                                    at System.Collections.Generic.List`1.set_Item(Int32 index, T value)
+                                    at FisrtPlugin.FisrtPlugin.UpdatePlayerInfoToSend(PlayerData playerData)
+                                    at FisrtPlugin.FisrtPlugin.NewGlobal_MessageReceived(Object sender, MessageReceivedEventArgs e)
+                                    at DarkRift.Server.Client.<>c__DisplayClass56_0.<HandleIncomingMessage>g__DoMessageReceived|0() in C:\Users\JAHC-DeV\Desktop\DarkRift-master\DarkRift.Server\Client.cs:line 332
+[Error]   Client                A plugin encountered an error whilst handling the MessageReceived event.
+                                 System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+                                    at System.Collections.Generic.List`1.set_Item(Int32 index, T value)
+                                    at FisrtPlugin.FisrtPlugin.UpdatePlayerInfoToSend(PlayerData playerData)
+                                    at FisrtPlugin.FisrtPlugin.NewGlobal_MessageReceived(Object sender, MessageReceivedEventArgs e)
+                                    at DarkRift.Server.Client.<>c__DisplayClass56_0.<HandleIncomingMessage>g__DoMessageReceived|0() in C:\Users\JAHC-DeV\Desktop\DarkRift-master\DarkRift.Server\Client.cs:line 332
+[Error]   Client                A plugin encountered an error whilst handling the MessageReceived event.
+                                 System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+                                    at System.Collections.Generic.List`1.set_Item(Int32 index, T value)
+                                    at FisrtPlugin.FisrtPlugin.UpdatePlayerInfoToSend(PlayerData playerData)
+                                    at FisrtPlugin.FisrtPlugin.NewGlobal_MessageReceived(Object sender, MessageReceivedEventArgs e)
+                                    at DarkRift.Server.Client.<>c__DisplayClass56_0.<HandleIncomingMessage>g__DoMessageReceived|0() in C:\Users\JAHC-DeV\Desktop\DarkRift-master\DarkRift.Server\Client.cs:line 332
+[Error]   Client                A plugin encountered an error whilst handling the MessageReceived event.
+                                 System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+                                    at System.Collections.Generic.List`1.set_Item(Int32 index, T value)
+                                    at FisrtPlugin.FisrtPlugin.UpdatePlayerInfoToSend(PlayerData playerData)
+                                    at FisrtPlugin.FisrtPlugin.NewGlobal_MessageReceived(Object sender, MessageReceivedEventArgs e)
+                                    at DarkRift.Server.Client.<>c__DisplayClass56_0.<HandleIncomingMessage>g__DoMessageReceived|0() in C:\Users\JAHC-DeV\Desktop\DarkRift-master\DarkRift.Server\Client.cs:line 332
+[Error]   Client                A plugin encountered an error whilst handling the MessageReceived event.
+                                 System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+                                    at System.Collections.Generic.List`1.set_Item(Int32 index, T value)
+                                    at FisrtPlugin.FisrtPlugin.UpdatePlayerInfoToSend(PlayerData playerData)
+                                    at FisrtPlugin.FisrtPlugin.NewGlobal_MessageReceived(Object sender, MessageReceivedEventArgs e)
+                                    at DarkRift.Server.Client.<>c__DisplayClass56_0.<HandleIncomingMessage>g__DoMessageReceived|0() in C:\Users\JAHC-DeV\Desktop\DarkRift-master\DarkRift.Server\Client.cs:line 332
+[Info]    ClientManager         Client [1] disconnected.

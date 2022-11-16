@@ -36,14 +36,6 @@
             "fileVersion": "2.10.1.0"
           }
         }
-      },
-      "DarkRift.Client/2.10.1.0": {
-        "runtime": {
-          "DarkRift.Client.dll": {
-            "assemblyVersion": "2.10.1.0",
-            "fileVersion": "2.10.1.0"
-          }
-        }
       }
     }
   },
@@ -64,11 +56,6 @@
       "sha512": ""
     },
     "DarkRift.Server/2.10.1.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "DarkRift.Client/2.10.1.0": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""
