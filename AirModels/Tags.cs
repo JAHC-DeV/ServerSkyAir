@@ -1,11 +1,8 @@
-﻿namespace AirModels
+﻿public enum Tags
 {
-    public enum Tags
-    {
-        NewPlayerInstantiateData = 0,
-        NewPlayerSpawnData = 1,
-        AllPlayersSpawnData = 2,
-        DisconnectedPlayerData = 3,
-        UpdatePlayerData = 4,
-    }
+    JoinGame = 0,
+    UpdatePlayerData = 1,
+    PlayerEnter = 2,
+    PlayerLeave = 3,
+    PlayersList = 4,
 }

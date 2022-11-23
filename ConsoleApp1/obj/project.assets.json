@@ -1,8 +1,7 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {},
-    "net6.0/linux-x64": {}
+    "net6.0": {}
   },
   "libraries": {},
   "projectFileDependencyGroups": {
@@ -14,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Proyects\\ServerApp\\ConsoleApp1\\ServerApp.csproj",
+      "projectUniqueName": "C:\\Users\\JAHC-DeV\\Desktop\\ServerApp\\ConsoleApp1\\ServerApp.csproj",
       "projectName": "ServerApp",
-      "projectPath": "E:\\Proyects\\ServerApp\\ConsoleApp1\\ServerApp.csproj",
+      "projectPath": "C:\\Users\\JAHC-DeV\\Desktop\\ServerApp\\ConsoleApp1\\ServerApp.csproj",
       "packagesPath": "C:\\Users\\JAHC-DeV\\.nuget\\packages\\",
-      "outputPath": "E:\\Proyects\\ServerApp\\ConsoleApp1\\obj\\",
+      "outputPath": "C:\\Users\\JAHC-DeV\\Desktop\\ServerApp\\ConsoleApp1\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\JAHC-DeV\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -57,31 +56,12 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Runtime.linux-x64",
-            "version": "[6.0.11, 6.0.11]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Host.linux-x64",
-            "version": "[6.0.11, 6.0.11]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Runtime.linux-x64",
-            "version": "[6.0.11, 6.0.11]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
-      }
-    },
-    "runtimes": {
-      "linux-x64": {
-        "#import": []
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
       }
     }
   }

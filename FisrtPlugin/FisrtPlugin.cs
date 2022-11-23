@@ -11,15 +11,13 @@ namespace FisrtPlugin
     {
         public override bool ThreadSafe => false;
         public override Version Version => new Version(1, 0);
-
-        public float[] P_1 = new float[3] { -2.11f, -6.09f, 13.11059f};
-        public float[] P_2 = new float[3] { 21.2f, -6.09f, 13.11059f };
-
+        private LobbyModel lobby;
         private Dictionary<int,PlayerData> playersInLobby;
         public FisrtPlugin(PluginLoadData pluginLoadData) : base(pluginLoadData)
         {
-            Console.WriteLine("AlRight");
+            Console.WriteLine("Plugin Loader");
             playersInLobby = new Dictionary<int, PlayerData>();
+            lobby = new LobbyModel();
             ClientManager.ClientConnected += NewClient_Connected;
             ClientManager.ClientDisconnected += Client_DisconnectedEvent;
         }
@@ -43,7 +41,7 @@ namespace FisrtPlugin
             {
                 case Tags.NewPlayerInstantiateData:
                     Console.WriteLine("New MSG: --------------------------------------------------------------");
-                    var newPlayer = e.GetMessage().Deserialize<NewPlayerInstantiateData>();                        
+                    var newPlayer = e.GetMessage().Deserialize<JoinGameModel>();                        
                     Console.WriteLine("PlayerID: " + newPlayer.Player.PlayerID);
                     Console.WriteLine("Nickname: " + newPlayer.Player.Nickname);
                     Console.WriteLine("PlayerAvatar: " + newPlayer.Player.PlayerAvatar);

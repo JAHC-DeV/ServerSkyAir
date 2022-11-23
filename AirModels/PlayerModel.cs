@@ -6,8 +6,13 @@ namespace AirModels
 {
     public class PlayerModel
     {
+        //Control
+      
+        
         //Info
         public int PlayerID { get; set; }
+        public string IdPublic { get; set; }
+        public ushort IdRoom { get; set; }
         public string Nickname { get; set; }
         public byte PlayerAvatar { get; set; }
         //Potition

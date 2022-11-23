@@ -1,0 +1,7 @@
+C:\Users\JAHC-DeV\Desktop\ServerApp\ConsoleApp1\bin\Debug\net6.0\linux-x64\publish\ServerApp
+C:\Users\JAHC-DeV\Desktop\ServerApp\ConsoleApp1\bin\Debug\net6.0\linux-x64\publish\ServerApp.dll
+C:\Users\JAHC-DeV\Desktop\ServerApp\ConsoleApp1\bin\Debug\net6.0\linux-x64\publish\ServerApp.deps.json
+C:\Users\JAHC-DeV\Desktop\ServerApp\ConsoleApp1\bin\Debug\net6.0\linux-x64\publish\ServerApp.runtimeconfig.json
+C:\Users\JAHC-DeV\Desktop\ServerApp\ConsoleApp1\bin\Debug\net6.0\linux-x64\publish\ServerApp.pdb
+C:\Users\JAHC-DeV\Desktop\ServerApp\ConsoleApp1\bin\Debug\net6.0\linux-x64\publish\DarkRift.dll
+C:\Users\JAHC-DeV\Desktop\ServerApp\ConsoleApp1\bin\Debug\net6.0\linux-x64\publish\DarkRift.Server.dll
