@@ -1,10 +1,11 @@
-﻿using System;
+﻿using DarkRift;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace AirModels
 {
-    public class PlayerModel
+    public class PlayerModel : IDarkRiftSerializable
     {
         //Control
       
@@ -24,12 +25,12 @@ namespace AirModels
         public short R_Y { get; set; }
         public short R_Z { get; set; }
         //Extra
-        private float currentSpeed = 0.0f;
-        public float CurrentSpeed { get => currentSpeed; set => currentSpeed = value; }
-        public float CurrentRollSpeed { get; set; }
-        public float CurrentPitchSpeed { get; set; }
-        public float CurrentYawSpeed { get; set; }
-        public float Input_H { get; set; }
-        public float Input_V { get; set;}
+        public float CurrentSpeed { get; set; }
+        public int BulletCount { get; set; }
+
+        public virtual void Deserialize(DeserializeEvent e){}
+
+        public virtual void Serialize(SerializeEvent e) { }
+
     }
 }

@@ -3,7 +3,7 @@ using DarkRift;
 
 namespace AirModels
 {
-    public class JoinGameModel : PlayerModel, IDarkRiftSerializable
+    public class JoinGameModel : PlayerModel
     {
         public JoinGameModel(ushort id,string idPublic, string nickname, byte avatar)
         {
@@ -17,7 +17,7 @@ namespace AirModels
 
         }
 
-        public void Deserialize(DeserializeEvent e)
+        public override void Deserialize(DeserializeEvent e)
         {
 
             PlayerID = e.Reader.ReadInt32();
@@ -26,7 +26,7 @@ namespace AirModels
             PlayerAvatar = e.Reader.ReadByte();
         }
 
-        public void Serialize(SerializeEvent e)
+        public override void Serialize(SerializeEvent e)
         {
             e.Writer.Write(PlayerID);
             e.Writer.Write(IdPublic);

@@ -16,26 +16,33 @@ namespace FisrtPlugin
         public FisrtPlugin(PluginLoadData pluginLoadData) : base(pluginLoadData)
         {
             Console.WriteLine("Plugin Loader");
-            playersInLobby = new Dictionary<int, PlayerData>();
             lobby = new LobbyModel();
             ClientManager.ClientConnected += NewClient_Connected;
-            ClientManager.ClientDisconnected += Client_DisconnectedEvent;
+            ClientManager.ClientDisconnected += lobby.PlayerDisconected;
         }
+        //public FisrtPlugin(PluginLoadData pluginLoadData) : base(pluginLoadData)
+        //{
+        //    Console.WriteLine("Plugin Loader");
+        //    playersInLobby = new Dictionary<int, PlayerData>();
+        //    lobby = new LobbyModel();
+        //    ClientManager.ClientConnected += NewClient_Connected;
+        //    ClientManager.ClientDisconnected += Client_DisconnectedEvent;
+        //}
 
         private void Client_DisconnectedEvent(object? sender, ClientDisconnectedEventArgs e)
         {
-            PlayerData? out_Player = playersInLobby[e.Client.ID];
+          /*  PlayerData? out_Player = playersInLobby[e.Client.ID];
             e.Client.MessageReceived -= NewGlobal_MessageReceived;
-            DisconnectPlayer(out_Player);
+            DisconnectPlayer(out_Player);*/
         }
 
         private void NewClient_Connected(object? sender, ClientConnectedEventArgs e)
         {
             Console.WriteLine("New Client Connected\t ID: {0}",e.Client.ID);
-            e.Client.MessageReceived += NewGlobal_MessageReceived;
+            lobby.AddClientToLobby(e.Client);
         }
 
-        private void NewGlobal_MessageReceived(object? sender, MessageReceivedEventArgs e)
+  /*      private void NewGlobal_MessageReceived(object? sender, MessageReceivedEventArgs e)
         {
             switch ((Tags)e.Tag)
             {
@@ -135,23 +142,23 @@ namespace FisrtPlugin
 
         private void DisconnectPlayer(PlayerData? player)
         {
-            using (var msg = Message.Create((ushort)Tags.DisconnectedPlayerData,new PlayerData(player)))
-            {
-                foreach (var item in ClientManager.GetAllClients())
-                {
-                    try
-                    {
-                        if (player.PlayerID == item.ID)
-                            continue;
-                        item.SendMessage(msg, SendMode.Reliable);
-                    }
-                    catch (Exception) { Console.WriteLine("Aqui 3"); continue; }
-                }
+            //using (var msg = Message.Create((ushort)Tags.DisconnectedPlayerData,new PlayerData(player)))
+            //{
+            //    foreach (var item in ClientManager.GetAllClients())
+            //    {
+            //        try
+            //        {
+            //            if (player.PlayerID == item.ID)
+            //                continue;
+            //            item.SendMessage(msg, SendMode.Reliable);
+            //        }
+            //        catch (Exception) { Console.WriteLine("Aqui 3"); continue; }
+            //    }
 
-                if (playersInLobby.ContainsKey(player.PlayerID))                
-                    playersInLobby.Remove(player.PlayerID);                    
-            }
-            Console.WriteLine("Player Disconnected Now: {0}", playersInLobby.Count);
-        }
+            //    if (playersInLobby.ContainsKey(player.PlayerID))                
+            //        playersInLobby.Remove(player.PlayerID);                    
+            //}
+            //Console.WriteLine("Player Disconnected Now: {0}", playersInLobby.Count);
+        }*/
     }
 }

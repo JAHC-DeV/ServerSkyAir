@@ -13,14 +13,39 @@ namespace FisrtPlugin
     {
 
         public Dictionary<int, IClient> players = new Dictionary<int, IClient>();
+        public List<int> playersInLobby;
         private List<Room> rooms = new List<Room>();
         public int PlayersCount { get => players.Count; }
         private long idCounter = 0;
         public int roomsFull = 0;
+
+        public LobbyModel()
+        {
+            playersInLobby = new List<int>();
+            Console.WriteLine("LobbyStatted");
+        }
+
         public void AddClientToLobby(IClient client)
         {
             players.Add(client.ID, client);
+            playersInLobby.Add(client.ID);
             client.MessageReceived += Lobby_MessageReceived;
+        }
+        public void PlayerDisconected(object? sender, ClientDisconnectedEventArgs e)
+        {
+            if (playersInLobby.Contains(e.Client.ID))
+            {
+                e.Client.MessageReceived -= Lobby_MessageReceived;
+                playersInLobby.Remove(e.Client.ID);
+            }
+            else
+                DeleteOnRoom(e.Client.ID);
+        }
+
+        private void DeleteOnRoom(ushort id)
+        {
+            var room = rooms.Find(r => r.FindPlayer(id));
+            room!.QuitPlayer(id);
         }
 
         private void Lobby_MessageReceived(object? sender, MessageReceivedEventArgs e)
@@ -44,10 +69,12 @@ namespace FisrtPlugin
         {
             if (rooms.Count == 0)
             {
+                
                 var room = new Room(this, UpdateCounter());
                 client.MessageReceived -= Lobby_MessageReceived;
                 room.AddToRoom(client, new PlayerData(data));
                 rooms.Add(room);
+                Console.WriteLine("RoomCreated");
             }
             else
             {
@@ -70,6 +97,7 @@ namespace FisrtPlugin
                     rooms.Add(room);
                 }
             }
+            playersInLobby.Remove(client.ID);
         }
 
 
@@ -88,7 +116,6 @@ namespace FisrtPlugin
             if (player != null)
             {
                 player.SendMessage(msg, mode);
-                msg.Dispose();
             }
         }
 

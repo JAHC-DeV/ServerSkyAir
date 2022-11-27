@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Numerics;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -30,6 +31,8 @@ namespace FisrtPlugin
         {
             playersData.Add(netClient.ID, playerData);
             netClient.MessageReceived += Room_MessageRecived;
+            
+            GeneratePointSpawn(playerData);
         }
 
         private void Room_MessageRecived(object? sender, MessageReceivedEventArgs e)
@@ -40,6 +43,10 @@ namespace FisrtPlugin
                     var playerData = e.GetMessage().Deserialize<PlayerData>();
                     UpdatePlayerInfoToSend(playerData);
                     break;
+                case Tags.PlayerShoot:
+                    var playerShoot = e.GetMessage().Deserialize<ShootModel>();
+                    PlayerShoot(playerShoot);
+                    break;
                 default:
                     Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("Command: {0} Unsopported...", e.Tag);
@@ -47,36 +54,45 @@ namespace FisrtPlugin
                     break;
             }
         }
+
+        private void PlayerShoot(ShootModel shoot)
+        {
+            if (playersData[shoot.PlayerID].BulletCount >= shoot.BulletCount)
+            {
+                SendToAllInRoom(Tags.PlayerShoot, shoot, SendMode.Reliable, shoot.PlayerID, true);
+            }
+            else
+            {
+                using (var msg = Message.Create((ushort)Tags.MsgError, new MsgError((ushort)ErrorTag.NoBullet, "No Bullet")))
+                {
+                    lobby.SendMessageToPlayer(shoot.PlayerID, msg, SendMode.Reliable);
+                }                                   
+            }
+        }
         private void UpdatePlayerInfoToSend(PlayerData playerData)
         {
             if (playersData.ContainsKey(playerData.PlayerID))
-                playersData[playerData.PlayerID] = playerData;
-
-            using (var msg = Message.Create((ushort)Tags.UpdatePlayerData, playerData))
             {
-                for (int i = 0; i < playersData.Count; i++)
-                {
-                    try
-                    {
-                        if (playerData.PlayerID == playersData.Keys.ToArray()[i])
-                            continue;
-
-                        lobby.SendMessageToPlayer(playerData.PlayerID, msg, SendMode.Unreliable);
-                    }
-                    catch (Exception) { Console.WriteLine("Aqui 1"); continue; }
-
-                }
-
+                playersData[playerData.PlayerID].P_X = playerData.P_X;
+                playersData[playerData.PlayerID].P_Y = playerData.P_Y;
+                playersData[playerData.PlayerID].P_Z = playerData.P_Z;
+                playersData[playerData.PlayerID].CurrentSpeed = playerData.CurrentSpeed;
+                playersData[playerData.PlayerID].R_X = playerData.R_X;
+                playersData[playerData.PlayerID].R_Y = playerData.R_Y;
+                playersData[playerData.PlayerID].R_Z = playerData.R_Z;               
             }
+            SendToAllInRoom(Tags.UpdatePlayerData, playerData, SendMode.Unreliable, (ushort)playerData.PlayerID);
+           
         }
 
         private void GeneratePointSpawn(PlayerData playerData)
         {
-            float x, y;
-            x=  MathF.Cos(Random.Shared.Next(0, 35));
-            y = MathF.Sin(Random.Shared.Next(0, 35));
-            playerData.P_X = (int)x * 7500;
-            playerData.P_Y = (int)y * 7500;
+            float x, z;
+            x=  MathF.Cos(Random.Shared.Next(0, 35)) * 7500;
+            z = MathF.Sin(Random.Shared.Next(0, 35)) * 7500;
+            playerData.P_X = (int)(x);
+            playerData.P_Z = (int)(z);
+            playerData.P_Y = 1000;
             using (var msg = Message.Create((ushort)Tags.PlayerEnter, playerData))
             {
                 DarkRiftWriter allPlayer = DarkRiftWriter.Create();
@@ -105,9 +121,45 @@ namespace FisrtPlugin
                         }
                         lobby.SendMessageToPlayer(item.Key, msg, SendMode.Reliable);
                     }
-                    catch (Exception) { Console.WriteLine("Aqui 2"); continue; }
+                    catch (Exception) { Console.WriteLine("Aqui 3"); continue; }
                 }
             }
+        }
+
+        public bool FindPlayer(int id)
+        {
+            return playersData.ContainsKey(id);
+        }
+
+        private void SendToAllInRoom<T>(Tags tag,T data,SendMode mode,ushort myId,bool sendToMy = false) where T : IDarkRiftSerializable
+        {
+            using (var msg = Message.Create((ushort)tag, data))
+            {
+                for (int i = 0; i < playersData.Count; i++)
+                {
+                    try
+                    {
+                        if (myId == playersData.Keys.ToArray()[i] && !sendToMy)
+                            continue;
+
+                        lobby.SendMessageToPlayer(myId, msg, mode);
+                    }
+                    catch (Exception) { Console.WriteLine("Aqui 1"); continue; }
+
+                }
+
+            }
+        }
+
+        public void QuitPlayer(ushort id)
+        {
+            if (playersData.ContainsKey(id))
+            {
+                SendToAllInRoom(Tags.PlayerLeave, new PlayerLeave(playersData[id]), SendMode.Reliable,id);
+                playersData.Remove(id);
+                lobby.players[id].MessageReceived -= Room_MessageRecived;
+            }
+
         }
     }
 }

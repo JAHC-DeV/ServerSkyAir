@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="xcopy /y E:\Proyects\ServerApp\AirModels\bin\Debug\netstandard2.0\AirModels.dll E:\Proyects\ServerApp\ConsoleApp1\bin\Debug\net6.0\Plugins\AirModels.dll&#xD;&#xA;xcopy /y E:\Proyects\ServerApp\AirModels\bin\Debug\netstandard2.0\AirModels.dll E:\Proyects\DarkRift\Assets\Plugins\AirModels.dll" />
+    
   </Target>
 
   <ItemGroup>

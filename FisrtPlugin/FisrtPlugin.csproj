@@ -20,7 +20,11 @@
   </ItemGroup>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="xcopy /y E:\Proyects\ServerApp\FisrtPlugin\bin\Debug\net6.0\FisrtPlugin.dll E:\Proyects\ServerApp\ConsoleApp1\bin\Debug\net6.0\Plugins\FisrtPlugin.dll" />
+   
+  </Target>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="xcopy /y C:\Users\JAHC-DeV\Desktop\ServerApp\FisrtPlugin\bin\Debug\net6.0\FisrtPlugin.dll C:\Users\JAHC-DeV\Desktop\ServerApp\ConsoleApp1\bin\Debug\net6.0\Plugins\FisrtPlugin.dll" />
   </Target>
 
 </Project>
