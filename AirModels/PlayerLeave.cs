@@ -7,6 +7,10 @@ namespace AirModels
 {
     public class PlayerLeave: PlayerModel
     {
+        public PlayerLeave()
+        {
+
+        }
         public PlayerLeave(PlayerModel model)
         {
             PlayerID = model.PlayerID;

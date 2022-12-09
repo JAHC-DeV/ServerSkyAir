@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "L+DjCSau0aMXaYW7sZsPz7ChCx+xLwcKnow/QOpGRd36s1ovehwALZvBjBMh/dt9rBo6An3NBBmBPq7wjdX4ZA==",
+  "dgSpecHash": "9LBcHLk7YIaYfepHyNxD2ZQf+kVx/oymu05dOwJ6CwLd+3MNHWKDXT4m9iGKomYMTkNA8ESnDTmaSzpztyB95Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\JAHC-DeV\\Desktop\\ServerApp\\ConsoleApp1\\ServerApp.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "G:\\ServerApp\\ConsoleApp1\\ServerApp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\JAHC-DeV\\.nuget\\packages\\microsoft.netcore.app.runtime.linux-x64\\6.0.10\\microsoft.netcore.app.runtime.linux-x64.6.0.10.nupkg.sha512",
+    "C:\\Users\\JAHC-DeV\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.linux-x64\\6.0.10\\microsoft.aspnetcore.app.runtime.linux-x64.6.0.10.nupkg.sha512",
+    "C:\\Users\\JAHC-DeV\\.nuget\\packages\\microsoft.netcore.app.host.linux-x64\\6.0.10\\microsoft.netcore.app.host.linux-x64.6.0.10.nupkg.sha512"
+  ],
   "logs": []
 }

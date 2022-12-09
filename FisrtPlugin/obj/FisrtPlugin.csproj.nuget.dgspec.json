@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\JAHC-DeV\\Desktop\\ServerApp\\FisrtPlugin\\FisrtPlugin.csproj": {}
+    "C:\\Users\\SKYNET\\Desktop\\ServerApp\\FisrtPlugin\\FisrtPlugin.csproj": {}
   },
   "projects": {
-    "C:\\Users\\JAHC-DeV\\Desktop\\ServerApp\\AirModels\\AirModels.csproj": {
+    "C:\\Users\\SKYNET\\Desktop\\ServerApp\\AirModels\\AirModels.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\JAHC-DeV\\Desktop\\ServerApp\\AirModels\\AirModels.csproj",
+        "projectUniqueName": "C:\\Users\\SKYNET\\Desktop\\ServerApp\\AirModels\\AirModels.csproj",
         "projectName": "AirModels",
-        "projectPath": "C:\\Users\\JAHC-DeV\\Desktop\\ServerApp\\AirModels\\AirModels.csproj",
-        "packagesPath": "C:\\Users\\JAHC-DeV\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\JAHC-DeV\\Desktop\\ServerApp\\AirModels\\obj\\",
+        "projectPath": "C:\\Users\\SKYNET\\Desktop\\ServerApp\\AirModels\\AirModels.csproj",
+        "packagesPath": "C:\\Users\\SKYNET\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\SKYNET\\Desktop\\ServerApp\\AirModels\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\JAHC-DeV\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\SKYNET\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -62,17 +62,17 @@
         }
       }
     },
-    "C:\\Users\\JAHC-DeV\\Desktop\\ServerApp\\FisrtPlugin\\FisrtPlugin.csproj": {
+    "C:\\Users\\SKYNET\\Desktop\\ServerApp\\FisrtPlugin\\FisrtPlugin.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\JAHC-DeV\\Desktop\\ServerApp\\FisrtPlugin\\FisrtPlugin.csproj",
+        "projectUniqueName": "C:\\Users\\SKYNET\\Desktop\\ServerApp\\FisrtPlugin\\FisrtPlugin.csproj",
         "projectName": "FisrtPlugin",
-        "projectPath": "C:\\Users\\JAHC-DeV\\Desktop\\ServerApp\\FisrtPlugin\\FisrtPlugin.csproj",
-        "packagesPath": "C:\\Users\\JAHC-DeV\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\JAHC-DeV\\Desktop\\ServerApp\\FisrtPlugin\\obj\\",
+        "projectPath": "C:\\Users\\SKYNET\\Desktop\\ServerApp\\FisrtPlugin\\FisrtPlugin.csproj",
+        "packagesPath": "C:\\Users\\SKYNET\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\SKYNET\\Desktop\\ServerApp\\FisrtPlugin\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\JAHC-DeV\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\SKYNET\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -86,8 +86,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\JAHC-DeV\\Desktop\\ServerApp\\AirModels\\AirModels.csproj": {
-                "projectPath": "C:\\Users\\JAHC-DeV\\Desktop\\ServerApp\\AirModels\\AirModels.csproj"
+              "C:\\Users\\SKYNET\\Desktop\\ServerApp\\AirModels\\AirModels.csproj": {
+                "projectPath": "C:\\Users\\SKYNET\\Desktop\\ServerApp\\AirModels\\AirModels.csproj"
               }
             }
           }

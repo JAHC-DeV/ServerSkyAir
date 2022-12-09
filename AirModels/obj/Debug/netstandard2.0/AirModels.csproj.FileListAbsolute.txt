@@ -50,3 +50,15 @@ C:\Users\JAHC-DeV\Desktop\ServerApp\AirModels\obj\Debug\netstandard2.0\AirModels
 C:\Users\JAHC-DeV\Desktop\ServerApp\AirModels\obj\Debug\netstandard2.0\AirModels.csproj.CopyComplete
 C:\Users\JAHC-DeV\Desktop\ServerApp\AirModels\obj\Debug\netstandard2.0\AirModels.dll
 C:\Users\JAHC-DeV\Desktop\ServerApp\AirModels\obj\Debug\netstandard2.0\AirModels.pdb
+C:\Users\SKYNET\Desktop\ServerApp\AirModels\bin\Debug\netstandard2.0\AirModels.deps.json
+C:\Users\SKYNET\Desktop\ServerApp\AirModels\bin\Debug\netstandard2.0\AirModels.dll
+C:\Users\SKYNET\Desktop\ServerApp\AirModels\bin\Debug\netstandard2.0\AirModels.pdb
+C:\Users\SKYNET\Desktop\ServerApp\AirModels\bin\Debug\netstandard2.0\DarkRift.dll
+C:\Users\SKYNET\Desktop\ServerApp\AirModels\obj\Debug\netstandard2.0\AirModels.csproj.AssemblyReference.cache
+C:\Users\SKYNET\Desktop\ServerApp\AirModels\obj\Debug\netstandard2.0\AirModels.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\SKYNET\Desktop\ServerApp\AirModels\obj\Debug\netstandard2.0\AirModels.AssemblyInfoInputs.cache
+C:\Users\SKYNET\Desktop\ServerApp\AirModels\obj\Debug\netstandard2.0\AirModels.AssemblyInfo.cs
+C:\Users\SKYNET\Desktop\ServerApp\AirModels\obj\Debug\netstandard2.0\AirModels.csproj.CoreCompileInputs.cache
+C:\Users\SKYNET\Desktop\ServerApp\AirModels\obj\Debug\netstandard2.0\AirModels.csproj.CopyComplete
+C:\Users\SKYNET\Desktop\ServerApp\AirModels\obj\Debug\netstandard2.0\AirModels.dll
+C:\Users\SKYNET\Desktop\ServerApp\AirModels\obj\Debug\netstandard2.0\AirModels.pdb

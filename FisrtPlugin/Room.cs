@@ -40,11 +40,12 @@ namespace FisrtPlugin
             switch ((Tags)e.Tag)
             {
                 case Tags.UpdatePlayerData:
-                    var playerData = e.GetMessage().Deserialize<PlayerData>();
-                    UpdatePlayerInfoToSend(playerData);
+                    var playerData = e.GetMessage().Deserialize<PlayerData>();                  
+                    UpdatePlayerInfoToSend(playerData);                    
                     break;
                 case Tags.PlayerShoot:
                     var playerShoot = e.GetMessage().Deserialize<ShootModel>();
+                    Console.WriteLine("Shoot: {0}",playerShoot.PlayerID);
                     PlayerShoot(playerShoot);
                     break;
                 default:
@@ -57,7 +58,8 @@ namespace FisrtPlugin
 
         private void PlayerShoot(ShootModel shoot)
         {
-            if (playersData[shoot.PlayerID].BulletCount >= shoot.BulletCount)
+            SendToAllInRoom(Tags.PlayerShoot, shoot, SendMode.Reliable, shoot.PlayerID, true);
+            /*if (playersData[shoot.PlayerID].BulletCount >= shoot.BulletCount)
             {
                 SendToAllInRoom(Tags.PlayerShoot, shoot, SendMode.Reliable, shoot.PlayerID, true);
             }
@@ -67,7 +69,7 @@ namespace FisrtPlugin
                 {
                     lobby.SendMessageToPlayer(shoot.PlayerID, msg, SendMode.Reliable);
                 }                                   
-            }
+            }*/
         }
         private void UpdatePlayerInfoToSend(PlayerData playerData)
         {
@@ -88,11 +90,11 @@ namespace FisrtPlugin
         private void GeneratePointSpawn(PlayerData playerData)
         {
             float x, z;
-            x=  MathF.Cos(Random.Shared.Next(0, 35)) * 7500;
-            z = MathF.Sin(Random.Shared.Next(0, 35)) * 7500;
+            x=  MathF.Cos(Random.Shared.Next(0, 35)) * 1000;
+            z = MathF.Sin(Random.Shared.Next(0, 35)) * 1000;
             playerData.P_X = (int)(x);
             playerData.P_Z = (int)(z);
-            playerData.P_Y = 1000;
+            playerData.P_Y = 20;
             using (var msg = Message.Create((ushort)Tags.PlayerEnter, playerData))
             {
                 DarkRiftWriter allPlayer = DarkRiftWriter.Create();
@@ -141,10 +143,10 @@ namespace FisrtPlugin
                     {
                         if (myId == playersData.Keys.ToArray()[i] && !sendToMy)
                             continue;
-
-                        lobby.SendMessageToPlayer(myId, msg, mode);
+ 
+                        lobby.SendMessageToPlayer(playersData[playersData.Keys.ToArray()[i]].PlayerID, msg, mode);                                               
                     }
-                    catch (Exception) { Console.WriteLine("Aqui 1"); continue; }
+                    catch (Exception e) { Console.WriteLine("Aqui 1: {0}---- CountPlayers: {1}",e.Message,playersData.Count); continue; }
 
                 }
 
@@ -156,6 +158,7 @@ namespace FisrtPlugin
             if (playersData.ContainsKey(id))
             {
                 SendToAllInRoom(Tags.PlayerLeave, new PlayerLeave(playersData[id]), SendMode.Reliable,id);
+                Console.WriteLine("Send PlayerLeave: {0}",id);
                 playersData.Remove(id);
                 lobby.players[id].MessageReceived -= Room_MessageRecived;
             }
