@@ -24,7 +24,7 @@
   </Target>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="xcopy /y C:\Users\SKYNET\Desktop\ServerApp\FisrtPlugin\bin\Debug\net6.0\FisrtPlugin.dll C:\Users\SKYNET\Desktop\ServerApp\ConsoleApp1\bin\Debug\net6.0\Plugins\FisrtPlugin.dll" />
+    <Exec Command="xcopy /y F:\ServerApp\FisrtPlugin\bin\Debug\net6.0\FisrtPlugin.dll F:\ServerApp\ConsoleApp1\bin\Debug\net6.0\Plugins\FisrtPlugin.dll" />
   </Target>
 
 </Project>

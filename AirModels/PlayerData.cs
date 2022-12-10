@@ -7,11 +7,14 @@ namespace AirModels
 {
     public class PlayerData : PlayerModel
     {
+        public int LastPlayerInpact { get; set; }
         public PlayerData(PlayerModel model)
         {
             PlayerID = model.PlayerID;
             Nickname = model.Nickname;
             PlayerAvatar = model.PlayerAvatar;
+            ModelSkin = model.ModelSkin;
+            Fuselage = model.Fuselage;            
             //Potition
             P_X = model.P_X;
             P_Y = model.P_Y;
@@ -32,6 +35,9 @@ namespace AirModels
             PlayerID = e.Reader.ReadInt32();
             Nickname = e.Reader.ReadString();
             PlayerAvatar = e.Reader.ReadByte();
+            ModelSkin = e.Reader.ReadByte();
+            Fuselage = e.Reader.ReadUInt16();
+            LastPlayerInpact = e.Reader.ReadInt32();
             //Potition
             P_X = e.Reader.ReadSingle();
             P_Y = e.Reader.ReadSingle();
@@ -49,6 +55,9 @@ namespace AirModels
             e.Writer.Write(PlayerID);
             e.Writer.Write(Nickname);
             e.Writer.Write(PlayerAvatar);
+            e.Writer.Write(ModelSkin);
+            e.Writer.Write(Fuselage);
+            e.Writer.Write(LastPlayerInpact);
             //Potition
             e.Writer.Write(P_X);
             e.Writer.Write(P_Y);

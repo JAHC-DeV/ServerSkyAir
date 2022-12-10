@@ -1,12 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "9LBcHLk7YIaYfepHyNxD2ZQf+kVx/oymu05dOwJ6CwLd+3MNHWKDXT4m9iGKomYMTkNA8ESnDTmaSzpztyB95Q==",
+  "dgSpecHash": "88YS0OR7ETzmJNqrJ21EmSTY7cU3zI+dAGSUcKpH1AYFI2B3DlqRj7ViPNXV6pQFmXXS5z76chWLVmLIOTP0Lg==",
   "success": true,
-  "projectFilePath": "G:\\ServerApp\\ConsoleApp1\\ServerApp.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\JAHC-DeV\\.nuget\\packages\\microsoft.netcore.app.runtime.linux-x64\\6.0.10\\microsoft.netcore.app.runtime.linux-x64.6.0.10.nupkg.sha512",
-    "C:\\Users\\JAHC-DeV\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.linux-x64\\6.0.10\\microsoft.aspnetcore.app.runtime.linux-x64.6.0.10.nupkg.sha512",
-    "C:\\Users\\JAHC-DeV\\.nuget\\packages\\microsoft.netcore.app.host.linux-x64\\6.0.10\\microsoft.netcore.app.host.linux-x64.6.0.10.nupkg.sha512"
-  ],
+  "projectFilePath": "F:\\ServerApp\\ConsoleApp1\\ServerApp.csproj",
+  "expectedPackageFiles": [],
   "logs": []
 }
