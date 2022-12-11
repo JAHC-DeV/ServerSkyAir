@@ -8,7 +8,7 @@ namespace AirModels
 {
     public class ShootModel : ObjectModel
     {
-        public ushort PlayerID { get; set; }
+        public int PlayerID { get; set; }
         public ushort BulletCount { get; set; }
         public short PlayerImpact { get; set; }
         public ushort Damage { get; set; }

@@ -18,6 +18,8 @@ namespace AirModels
         public byte PlayerAvatar { get; set; }
         public byte ModelSkin { get; set; }
         public ushort Fuselage { get; set; }
+        public bool IsAlive { get; set; }
+        public ushort Kills { get; set; }
         //Potition
         public float P_X { get; set; }
         public float P_Y { get; set; }

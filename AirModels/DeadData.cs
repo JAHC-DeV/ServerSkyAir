@@ -7,7 +7,7 @@ namespace AirModels
 {
     public class DeadData : IDarkRiftSerializable
     {
-        public ushort PlayerId { get; set; }
+        public int PlayerId { get; set; }
         public ushort DeadType { get; set; }
         public int[] Data { get; set; }
         public DeadData(ushort _playerId, TypeDead type, int[] _data)
@@ -15,7 +15,6 @@ namespace AirModels
             PlayerId = _playerId;
             DeadType = (ushort)type;
             Data = _data;
-
         }
         public DeadData()
         {

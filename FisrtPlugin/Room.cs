@@ -13,20 +13,49 @@ namespace FisrtPlugin
 {
     public class Room
     {
+        //Contiene Todos Los Datos de los players en la Sala
         private Dictionary<int, PlayerData> playersData = new Dictionary<int, PlayerData>();
+        /// <summary>
+        /// Id de la Sala 
+        /// </summary>
         private long id;
+        /// <summary>
+        /// Propiedad Id de la Sala
+        /// </summary>
         public long ID { get => id; }
+        /// <summary>
+        /// Propiedad cantidad de clientes en la sala
+        /// </summary>
         public int Count { get => playersData.Count; }
+        /// <summary>
+        /// Maximo de clientes en la sala
+        /// </summary>
         private int maxPlayers = 20;
+        /// <summary>
+        /// Propiedad Maximo de clientes en la sala
+        /// </summary>
         public int MaxPlayers { get => maxPlayers; }
+        /// <summary>
+        /// Referencia al lobby principal
+        /// </summary>
         private LobbyModel lobby;
+
+        /// <summary>
+        /// Contructor de la sala
+        /// </summary>
+        /// <param name="_lobby">Referencia al lobby principal</param>
+        /// <param name="_id">Id de la sala</param>
         public Room(LobbyModel _lobby, long _id)
         {
             id = _id;
             lobby = _lobby;
         }
 
-
+        /// <summary>
+        /// Agrega un nuevo cliente a la sala
+        /// </summary>
+        /// <param name="netClient">Interfas referente a la comunicacion con el cliente remoto</param>
+        /// <param name="playerData">Datos actuales del cliente</param>
         public void AddToRoom(IClient netClient, PlayerData playerData)
         {
             playersData.Add(netClient.ID, playerData);
@@ -34,7 +63,11 @@ namespace FisrtPlugin
 
             GeneratePointSpawn(playerData);
         }
-
+        /// <summary>
+        /// Metodo que ejecuta el evento de lectura de los msg enviados por los clientes
+        /// </summary>
+        /// <param name="sender">Objeto mismo</param>
+        /// <param name="e">Elemento que contiene la informacion recivida</param>
         private void Room_MessageRecived(object? sender, MessageReceivedEventArgs e)
         {
             switch ((Tags)e.Tag)
@@ -47,9 +80,13 @@ namespace FisrtPlugin
                     var playerShoot = e.GetMessage().Deserialize<ShootModel>();
                     PlayerShoot(playerShoot);
                     break;
-                case Tags.BulletImpact:
-                    var bulletimpactData = e.GetMessage().Deserialize<BulletInpactData>();
-                    PlayerReciveInpact(bulletimpactData);
+                case Tags.EnemyDead:
+                    var deadData = e.GetMessage().Deserialize<DeadData>();
+                    PlayerDead(deadData);
+                    break;
+                case Tags.PlayerLeave:
+                    var playerLeave = e.GetMessage().Deserialize<PlayerLeave>();
+                    QuitPlayer(playerLeave.PlayerID,!playerLeave.IsAlive);
                     break;
                 default:
                     Console.ForegroundColor = ConsoleColor.Red;
@@ -58,28 +95,37 @@ namespace FisrtPlugin
                     break;
             }
         }
-        void PlayerReciveInpact(BulletInpactData data)
+        /// <summary>
+        /// Metodo que se ejecuta cuando se recive que un cliente a muerto
+        /// </summary>
+        /// <param name="deadData">Define el tipo de muerte que tubo el cliente</param>
+        private void PlayerDead(DeadData deadData)
         {
-            if (playersData.ContainsKey(data.PlayerId))
+            SendToAllInRoom(Tags.EnemyDead, deadData, SendMode.Reliable, deadData.PlayerId);
+            if (playersData.ContainsKey(deadData.PlayerId))
             {
-                playersData[data.PlayerId].Fuselage -= data.BulletDamage;
-                playersData[data.PlayerId].LastPlayerInpact = data.BulletId;
-                if (playersData[data.PlayerId].Fuselage <= 0)
+                var playerImpact = playersData[deadData.PlayerId].LastPlayerImpact;
+                if (playerImpact != -1 && playersData.ContainsKey(playerImpact))
                 {
-                    var deadData = new DeadData(data.PlayerId, TypeDead.ImpactBullet, new int[2] { data.BulletId, 0 });
-                    SendToAllInRoom(Tags.EnemyDead, deadData, SendMode.Reliable, data.PlayerId,true);
-                    return;
+                    playersData[playerImpact].Kills++;
+                    using (var msg = Message.Create((ushort)Tags.UpdatePlayerData, playersData[playerImpact]))
+                       lobby.SendMessageToPlayer(playerImpact,msg,SendMode.Reliable);
                 }
-                using (var msg = Message.Create((ushort)Tags.BulletImpact, playersData[data.PlayerId]))
-                    lobby.SendMessageToPlayer(data.PlayerId, msg, SendMode.Reliable);
             }
-
         }
-
+        
+        /// <summary>
+        /// Metodo que se ejecuta cuando se recive que un cliente esta disparando
+        /// </summary>
+        /// <param name="shoot">Datos de la rafaga envida</param>
         private void PlayerShoot(ShootModel shoot)
         {
             SendToAllInRoom(Tags.PlayerShoot, shoot, SendMode.Reliable, shoot.PlayerID, true);
         }
+        /// <summary>
+        /// Metodo que se ejecuta cuando se recive una actualizacion de los datos del player
+        /// </summary>
+        /// <param name="playerData"></param>
         private void UpdatePlayerInfoToSend(PlayerData playerData)
         {
             if (playersData.ContainsKey(playerData.PlayerID))
@@ -96,6 +142,10 @@ namespace FisrtPlugin
 
         }
 
+        /// <summary>
+        /// Genera la posicion donde se Intanciara el cliente una vez unido a la sala
+        /// </summary>
+        /// <param name="playerData">Datos del cliete a editar la posicion</param>
         private void GeneratePointSpawn(PlayerData playerData)
         {
             float x, z;
@@ -136,13 +186,25 @@ namespace FisrtPlugin
                 }
             }
         }
-
+        /// <summary>
+        /// Busca un player en la sala
+        /// </summary>
+        /// <param name="id">Id del cliente a buscar</param>
+        /// <returns>Retorna si el cliente vive en esta sala o no</returns>
         public bool FindPlayer(int id)
         {
             return playersData.ContainsKey(id);
         }
-
-        private void SendToAllInRoom<T>(Tags tag, T data, SendMode mode, ushort myId, bool sendToMy = false) where T : IDarkRiftSerializable
+        /// <summary>
+        /// Envia un msg a todos los clientes de la sala
+        /// </summary>
+        /// <typeparam name="T">Tipo de dato que se va a enviar</typeparam>
+        /// <param name="tag">Tipo de msg a enviar</param>
+        /// <param name="data">Dato a enviar al cliente</param>
+        /// <param name="mode">Modo en el cual se enviaran los datos</param>
+        /// <param name="myId">Id del cliente que solicita enviar los datos</param>
+        /// <param name="sendToMy">Se enviara al mismo cliente que solicita enviar??</param>
+        private void SendToAllInRoom<T>(Tags tag, T data, SendMode mode, int myId, bool sendToMy = false) where T : IDarkRiftSerializable
         {
             using (var msg = Message.Create((ushort)tag, data))
             {
@@ -161,8 +223,12 @@ namespace FisrtPlugin
 
             }
         }
-
-        public void QuitPlayer(ushort id)
+        /// <summary>
+        /// Elimina un cliente de la sala
+        /// </summary>
+        /// <param name="id">Id del cliente a eliminar</param>
+        /// <param name="isDead">Define si se eliminara por que el cliente murio</param>
+        public void QuitPlayer(int id,bool isDead = false)
         {
             if (playersData.ContainsKey(id))
             {
@@ -170,8 +236,9 @@ namespace FisrtPlugin
                 Console.WriteLine("Send PlayerLeave: {0}", id);
                 playersData.Remove(id);
                 lobby.players[id].MessageReceived -= Room_MessageRecived;
+                if (isDead)
+                    lobby.ReturnToLobby(id);
             }
-
         }
     }
 }

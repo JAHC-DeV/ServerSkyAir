@@ -56,7 +56,7 @@ namespace FisrtPlugin
                     Console.WriteLine("New MSG: --------------------------------------------------------------");
                     var newPlayer = e.GetMessage().Deserialize<JoinGameModel>();
                     Console.WriteLine("PlayerID: " + newPlayer.PlayerID);
-                    Console.WriteLine("IdPublic: {0}", newPlayer.IdPublic);
+                    //Console.WriteLine("IdPublic: {0}", newPlayer.IdPublic);
                     Console.WriteLine("Nickname: " + newPlayer.Nickname);
                     Console.WriteLine("PlayerAvatar: " + newPlayer.PlayerAvatar);
                     Console.WriteLine("ModelSkin: {0}", newPlayer.ModelSkin);
@@ -130,5 +130,15 @@ namespace FisrtPlugin
                 idCounter++;
             return idCounter;
         }
+
+        internal void ReturnToLobby(int id)
+        {
+            if (players.ContainsKey(id))
+            {
+                players[id].MessageReceived += Lobby_MessageReceived;
+                playersInLobby.Add(id);
+            }
+        }
+
     }
 }

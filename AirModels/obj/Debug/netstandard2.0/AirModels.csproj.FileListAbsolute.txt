@@ -74,3 +74,15 @@ F:\ServerApp\AirModels\obj\Debug\netstandard2.0\AirModels.csproj.CoreCompileInpu
 F:\ServerApp\AirModels\obj\Debug\netstandard2.0\AirModels.csproj.CopyComplete
 F:\ServerApp\AirModels\obj\Debug\netstandard2.0\AirModels.dll
 F:\ServerApp\AirModels\obj\Debug\netstandard2.0\AirModels.pdb
+C:\Users\Jose A\Desktop\Nueva carpeta\ServerApp\AirModels\bin\Debug\netstandard2.0\AirModels.deps.json
+C:\Users\Jose A\Desktop\Nueva carpeta\ServerApp\AirModels\bin\Debug\netstandard2.0\AirModels.dll
+C:\Users\Jose A\Desktop\Nueva carpeta\ServerApp\AirModels\bin\Debug\netstandard2.0\AirModels.pdb
+C:\Users\Jose A\Desktop\Nueva carpeta\ServerApp\AirModels\bin\Debug\netstandard2.0\DarkRift.dll
+C:\Users\Jose A\Desktop\Nueva carpeta\ServerApp\AirModels\obj\Debug\netstandard2.0\AirModels.csproj.AssemblyReference.cache
+C:\Users\Jose A\Desktop\Nueva carpeta\ServerApp\AirModels\obj\Debug\netstandard2.0\AirModels.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Jose A\Desktop\Nueva carpeta\ServerApp\AirModels\obj\Debug\netstandard2.0\AirModels.AssemblyInfoInputs.cache
+C:\Users\Jose A\Desktop\Nueva carpeta\ServerApp\AirModels\obj\Debug\netstandard2.0\AirModels.AssemblyInfo.cs
+C:\Users\Jose A\Desktop\Nueva carpeta\ServerApp\AirModels\obj\Debug\netstandard2.0\AirModels.csproj.CoreCompileInputs.cache
+C:\Users\Jose A\Desktop\Nueva carpeta\ServerApp\AirModels\obj\Debug\netstandard2.0\AirModels.csproj.CopyComplete
+C:\Users\Jose A\Desktop\Nueva carpeta\ServerApp\AirModels\obj\Debug\netstandard2.0\AirModels.dll
+C:\Users\Jose A\Desktop\Nueva carpeta\ServerApp\AirModels\obj\Debug\netstandard2.0\AirModels.pdb
