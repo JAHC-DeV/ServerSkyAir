@@ -120,6 +120,7 @@ namespace FisrtPlugin
         /// <param name="shoot">Datos de la rafaga envida</param>
         private void PlayerShoot(ShootModel shoot)
         {
+            Console.WriteLine("Player Shoot: " + shoot.PlayerID);
             SendToAllInRoom(Tags.PlayerShoot, shoot, SendMode.Reliable, shoot.PlayerID, true);
         }
         /// <summary>
