@@ -16,6 +16,8 @@ namespace AirModels
         public ushort IdRoom { get; set; }
         public string Nickname { get; set; }
         public byte PlayerAvatar { get; set; }
+        public byte ModelSkin { get; set; }
+        public ushort Fuselage { get; set; }
         //Potition
         public float P_X { get; set; }
         public float P_Y { get; set; }

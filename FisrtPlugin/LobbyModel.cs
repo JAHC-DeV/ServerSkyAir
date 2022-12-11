@@ -59,6 +59,7 @@ namespace FisrtPlugin
                     Console.WriteLine("IdPublic: {0}", newPlayer.IdPublic);
                     Console.WriteLine("Nickname: " + newPlayer.Nickname);
                     Console.WriteLine("PlayerAvatar: " + newPlayer.PlayerAvatar);
+                    Console.WriteLine("ModelSkin: {0}", newPlayer.ModelSkin);
                     JoinGame(e.Client, newPlayer);
                     Console.WriteLine("-----------------------------------------------------------------------");
                     break;

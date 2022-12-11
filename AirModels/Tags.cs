@@ -6,7 +6,18 @@
     PlayerLeave = 3,
     PlayersList = 4,
     PlayerShoot = 5,
-    MsgError = 6
+    MsgError = 6,
+    BulletImpact = 7,
+    EnemyDead = 8,
+}
+
+public enum TypeDead
+{
+    ImpactGraund = 0,
+    ImpactStruct = 1,
+    ImpactWater = 2,
+    ImpactEnemy = 3,
+    ImpactBullet = 4,
 }
 public enum ErrorTag
 {

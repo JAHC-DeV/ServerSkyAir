@@ -1,0 +1,21 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "47908cb3-a2f8-4afd-9b10-20cc4a86ce57": {
+      "ProjectGuid": "47908cb3-a2f8-4afd-9b10-20cc4a86ce57",
+      "DisplayName": "AirModels",
+      "ColorIndex": 0
+    },
+    "54027553-9519-4a7d-931c-61bc3af9e561": {
+      "ProjectGuid": "54027553-9519-4a7d-931c-61bc3af9e561",
+      "DisplayName": "FisrtPlugin",
+      "ColorIndex": 1
+    },
+    "0c1c3121-3535-4876-bc31-e20ffd83e2d7": {
+      "ProjectGuid": "0c1c3121-3535-4876-bc31-e20ffd83e2d7",
+      "DisplayName": "ServerApp",
+      "ColorIndex": 2
+    }
+  },
+  "NextColorIndex": 3
+}
