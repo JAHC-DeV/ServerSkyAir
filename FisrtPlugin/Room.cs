@@ -20,7 +20,7 @@ namespace FisrtPlugin
         private int maxPlayers = 20;
         public int MaxPlayers { get => maxPlayers; }
         private LobbyModel lobby;
-        public Room(LobbyModel _lobby,long _id)
+        public Room(LobbyModel _lobby, long _id)
         {
             id = _id;
             lobby = _lobby;
@@ -31,7 +31,7 @@ namespace FisrtPlugin
         {
             playersData.Add(netClient.ID, playerData);
             netClient.MessageReceived += Room_MessageRecived;
-            
+
             GeneratePointSpawn(playerData);
         }
 
@@ -40,13 +40,16 @@ namespace FisrtPlugin
             switch ((Tags)e.Tag)
             {
                 case Tags.UpdatePlayerData:
-                    var playerData = e.GetMessage().Deserialize<PlayerData>();                  
-                    UpdatePlayerInfoToSend(playerData);                    
+                    var playerData = e.GetMessage().Deserialize<PlayerData>();
+                    UpdatePlayerInfoToSend(playerData);
                     break;
                 case Tags.PlayerShoot:
                     var playerShoot = e.GetMessage().Deserialize<ShootModel>();
-                    Console.WriteLine("Shoot: {0}",playerShoot.PlayerID);
                     PlayerShoot(playerShoot);
+                    break;
+                case Tags.BulletImpact:
+                    var bulletimpactData = e.GetMessage().Deserialize<BulletInpactData>();
+                    PlayerReciveInpact(bulletimpactData);
                     break;
                 default:
                     Console.ForegroundColor = ConsoleColor.Red;
@@ -55,21 +58,27 @@ namespace FisrtPlugin
                     break;
             }
         }
+        void PlayerReciveInpact(BulletInpactData data)
+        {
+            if (playersData.ContainsKey(data.PlayerId))
+            {
+                playersData[data.PlayerId].Fuselage -= data.BulletDamage;
+                playersData[data.PlayerId].LastPlayerInpact = data.BulletId;
+                if (playersData[data.PlayerId].Fuselage <= 0)
+                {
+                    var deadData = new DeadData(data.PlayerId, TypeDead.ImpactBullet, new int[2] { data.BulletId, 0 });
+                    SendToAllInRoom(Tags.EnemyDead, deadData, SendMode.Reliable, data.PlayerId,true);
+                    return;
+                }
+                using (var msg = Message.Create((ushort)Tags.BulletImpact, playersData[data.PlayerId]))
+                    lobby.SendMessageToPlayer(data.PlayerId, msg, SendMode.Reliable);
+            }
+
+        }
 
         private void PlayerShoot(ShootModel shoot)
         {
             SendToAllInRoom(Tags.PlayerShoot, shoot, SendMode.Reliable, shoot.PlayerID, true);
-            /*if (playersData[shoot.PlayerID].BulletCount >= shoot.BulletCount)
-            {
-                SendToAllInRoom(Tags.PlayerShoot, shoot, SendMode.Reliable, shoot.PlayerID, true);
-            }
-            else
-            {
-                using (var msg = Message.Create((ushort)Tags.MsgError, new MsgError((ushort)ErrorTag.NoBullet, "No Bullet")))
-                {
-                    lobby.SendMessageToPlayer(shoot.PlayerID, msg, SendMode.Reliable);
-                }                                   
-            }*/
         }
         private void UpdatePlayerInfoToSend(PlayerData playerData)
         {
@@ -81,16 +90,16 @@ namespace FisrtPlugin
                 playersData[playerData.PlayerID].CurrentSpeed = playerData.CurrentSpeed;
                 playersData[playerData.PlayerID].R_X = playerData.R_X;
                 playersData[playerData.PlayerID].R_Y = playerData.R_Y;
-                playersData[playerData.PlayerID].R_Z = playerData.R_Z;               
+                playersData[playerData.PlayerID].R_Z = playerData.R_Z;
             }
             SendToAllInRoom(Tags.UpdatePlayerData, playerData, SendMode.Unreliable, (ushort)playerData.PlayerID);
-           
+
         }
 
         private void GeneratePointSpawn(PlayerData playerData)
         {
             float x, z;
-            x=  MathF.Cos(Random.Shared.Next(0, 35)) * 1000;
+            x = MathF.Cos(Random.Shared.Next(0, 35)) * 1000;
             z = MathF.Sin(Random.Shared.Next(0, 35)) * 1000;
             playerData.P_X = (int)(x);
             playerData.P_Z = (int)(z);
@@ -133,7 +142,7 @@ namespace FisrtPlugin
             return playersData.ContainsKey(id);
         }
 
-        private void SendToAllInRoom<T>(Tags tag,T data,SendMode mode,ushort myId,bool sendToMy = false) where T : IDarkRiftSerializable
+        private void SendToAllInRoom<T>(Tags tag, T data, SendMode mode, ushort myId, bool sendToMy = false) where T : IDarkRiftSerializable
         {
             using (var msg = Message.Create((ushort)tag, data))
             {
@@ -143,10 +152,10 @@ namespace FisrtPlugin
                     {
                         if (myId == playersData.Keys.ToArray()[i] && !sendToMy)
                             continue;
- 
-                        lobby.SendMessageToPlayer(playersData[playersData.Keys.ToArray()[i]].PlayerID, msg, mode);                                               
+
+                        lobby.SendMessageToPlayer(playersData[playersData.Keys.ToArray()[i]].PlayerID, msg, mode);
                     }
-                    catch (Exception e) { Console.WriteLine("Aqui 1: {0}---- CountPlayers: {1}",e.Message,playersData.Count); continue; }
+                    catch (Exception e) { Console.WriteLine("Aqui 1: {0}---- CountPlayers: {1}", e.Message, playersData.Count); continue; }
 
                 }
 
@@ -157,8 +166,8 @@ namespace FisrtPlugin
         {
             if (playersData.ContainsKey(id))
             {
-                SendToAllInRoom(Tags.PlayerLeave, new PlayerLeave(playersData[id]), SendMode.Reliable,id);
-                Console.WriteLine("Send PlayerLeave: {0}",id);
+                SendToAllInRoom(Tags.PlayerLeave, new PlayerLeave(playersData[id]), SendMode.Reliable, id);
+                Console.WriteLine("Send PlayerLeave: {0}", id);
                 playersData.Remove(id);
                 lobby.players[id].MessageReceived -= Room_MessageRecived;
             }

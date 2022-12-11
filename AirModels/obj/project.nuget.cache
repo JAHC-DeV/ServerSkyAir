@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "LoK5I2IfL3FUrPdwfF8INSImc4hSvKjhVVPKaL3lDu0Oo1PGMBhNnghp0/llXFGfBxiPMeoBIWgJJnJRRNMbiw==",
+  "dgSpecHash": "BzKji/gDKeHQ5e9W7PSLz99lp77iLWKURmkRq2GZhrXPQXRrB30NVznnvp/Ou03mSPnSS1o+WZtc7AIMNwCpXw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\SKYNET\\Desktop\\ServerApp\\AirModels\\AirModels.csproj",
+  "projectFilePath": "F:\\ServerApp\\AirModels\\AirModels.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\SKYNET\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Users\\SKYNET\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+    "C:\\Users\\Jose A\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Jose A\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
   ],
   "logs": []
 }
