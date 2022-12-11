@@ -23,7 +23,7 @@ namespace AirModels
 
         public override void Deserialize(DeserializeEvent e)
         {
-            PlayerID = e.Reader.ReadUInt16();
+            PlayerID = e.Reader.ReadInt32();
             BulletCount = e.Reader.ReadUInt16();
             PlayerImpact = e.Reader.ReadInt16();
             Damage = e.Reader.ReadUInt16();
