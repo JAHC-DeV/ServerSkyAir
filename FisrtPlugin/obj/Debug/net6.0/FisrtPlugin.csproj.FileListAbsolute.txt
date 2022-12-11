@@ -104,3 +104,18 @@ F:\ServerApp\FisrtPlugin\obj\Debug\net6.0\FisrtPlugin.csproj.CopyComplete
 F:\ServerApp\FisrtPlugin\obj\Debug\net6.0\FisrtPlugin.dll
 F:\ServerApp\FisrtPlugin\obj\Debug\net6.0\ref\FisrtPlugin.dll
 F:\ServerApp\FisrtPlugin\obj\Debug\net6.0\FisrtPlugin.pdb
+C:\Users\Jose A\Desktop\Nueva carpeta\ServerApp\FisrtPlugin\bin\Debug\net6.0\FisrtPlugin.deps.json
+C:\Users\Jose A\Desktop\Nueva carpeta\ServerApp\FisrtPlugin\bin\Debug\net6.0\FisrtPlugin.dll
+C:\Users\Jose A\Desktop\Nueva carpeta\ServerApp\FisrtPlugin\bin\Debug\net6.0\ref\FisrtPlugin.dll
+C:\Users\Jose A\Desktop\Nueva carpeta\ServerApp\FisrtPlugin\bin\Debug\net6.0\FisrtPlugin.pdb
+C:\Users\Jose A\Desktop\Nueva carpeta\ServerApp\FisrtPlugin\bin\Debug\net6.0\AirModels.dll
+C:\Users\Jose A\Desktop\Nueva carpeta\ServerApp\FisrtPlugin\bin\Debug\net6.0\AirModels.pdb
+C:\Users\Jose A\Desktop\Nueva carpeta\ServerApp\FisrtPlugin\obj\Debug\net6.0\FisrtPlugin.csproj.AssemblyReference.cache
+C:\Users\Jose A\Desktop\Nueva carpeta\ServerApp\FisrtPlugin\obj\Debug\net6.0\FisrtPlugin.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Jose A\Desktop\Nueva carpeta\ServerApp\FisrtPlugin\obj\Debug\net6.0\FisrtPlugin.AssemblyInfoInputs.cache
+C:\Users\Jose A\Desktop\Nueva carpeta\ServerApp\FisrtPlugin\obj\Debug\net6.0\FisrtPlugin.AssemblyInfo.cs
+C:\Users\Jose A\Desktop\Nueva carpeta\ServerApp\FisrtPlugin\obj\Debug\net6.0\FisrtPlugin.csproj.CoreCompileInputs.cache
+C:\Users\Jose A\Desktop\Nueva carpeta\ServerApp\FisrtPlugin\obj\Debug\net6.0\FisrtPlugin.csproj.CopyComplete
+C:\Users\Jose A\Desktop\Nueva carpeta\ServerApp\FisrtPlugin\obj\Debug\net6.0\FisrtPlugin.dll
+C:\Users\Jose A\Desktop\Nueva carpeta\ServerApp\FisrtPlugin\obj\Debug\net6.0\ref\FisrtPlugin.dll
+C:\Users\Jose A\Desktop\Nueva carpeta\ServerApp\FisrtPlugin\obj\Debug\net6.0\FisrtPlugin.pdb

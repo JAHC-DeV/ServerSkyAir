@@ -12,7 +12,7 @@ namespace AirModels
         public ushort BulletCount { get; set; }
         public short PlayerImpact { get; set; }
         public ushort Damage { get; set; }
-        public ShootModel(ushort _playerId,ushort _bulletCount,ushort _damage,short _playerImpact)
+        public ShootModel(int _playerId,ushort _bulletCount,ushort _damage,short _playerImpact)
         {
             PlayerImpact = _playerImpact;
             PlayerID = _playerId;
