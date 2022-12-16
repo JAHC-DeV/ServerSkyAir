@@ -149,12 +149,15 @@ namespace FisrtPlugin
         /// <param name="playerData">Datos del cliete a editar la posicion</param>
         private void GeneratePointSpawn(PlayerData playerData)
         {
-            float x, z;
-            x = MathF.Cos(Random.Shared.Next(0, 35)) * 1000;
-            z = MathF.Sin(Random.Shared.Next(0, 35)) * 1000;
-            playerData.P_X = (int)(x);
-            playerData.P_Z = (int)(z);
-            playerData.P_Y = 20;
+
+            int angle = Random.Shared.Next(0, 35);
+            float x = MathF.Cos(angle) * 700;
+            float z = MathF.Sin(angle) * 700;
+
+            playerData.P_X = (x);
+            playerData.P_Z = (z);
+            playerData.P_Y = 50;
+
             using (var msg = Message.Create((ushort)Tags.PlayerEnter, playerData))
             {
                 DarkRiftWriter allPlayer = DarkRiftWriter.Create();

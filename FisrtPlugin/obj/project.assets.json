@@ -27,24 +27,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Jose A\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\SKYNET\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Jose A\\Desktop\\Nueva carpeta\\ServerApp\\FisrtPlugin\\FisrtPlugin.csproj",
+      "projectUniqueName": "F:\\TRABAJO\\Repositorio SkyAir\\Server\\ServerApp\\FisrtPlugin\\FisrtPlugin.csproj",
       "projectName": "FisrtPlugin",
-      "projectPath": "C:\\Users\\Jose A\\Desktop\\Nueva carpeta\\ServerApp\\FisrtPlugin\\FisrtPlugin.csproj",
-      "packagesPath": "C:\\Users\\Jose A\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Jose A\\Desktop\\Nueva carpeta\\ServerApp\\FisrtPlugin\\obj\\",
+      "projectPath": "F:\\TRABAJO\\Repositorio SkyAir\\Server\\ServerApp\\FisrtPlugin\\FisrtPlugin.csproj",
+      "packagesPath": "C:\\Users\\SKYNET\\.nuget\\packages\\",
+      "outputPath": "F:\\TRABAJO\\Repositorio SkyAir\\Server\\ServerApp\\FisrtPlugin\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Jose A\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\SKYNET\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -58,8 +53,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\Jose A\\Desktop\\Nueva carpeta\\ServerApp\\AirModels\\AirModels.csproj": {
-              "projectPath": "C:\\Users\\Jose A\\Desktop\\Nueva carpeta\\ServerApp\\AirModels\\AirModels.csproj"
+            "F:\\TRABAJO\\Repositorio SkyAir\\Server\\ServerApp\\AirModels\\AirModels.csproj": {
+              "projectPath": "F:\\TRABAJO\\Repositorio SkyAir\\Server\\ServerApp\\AirModels\\AirModels.csproj"
             }
           }
         }
@@ -89,7 +84,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
       }
     }
   }

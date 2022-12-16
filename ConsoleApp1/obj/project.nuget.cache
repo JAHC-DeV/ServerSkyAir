@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "88YS0OR7ETzmJNqrJ21EmSTY7cU3zI+dAGSUcKpH1AYFI2B3DlqRj7ViPNXV6pQFmXXS5z76chWLVmLIOTP0Lg==",
+  "dgSpecHash": "Cfs/ebvtgSbo8eg3alwrcOmrmKRRBeQYRNCY5SokpmOydmlzKIhXxqrvKOSxSM1MXRPGTKHFu9r4HOvs48Ul3g==",
   "success": true,
-  "projectFilePath": "F:\\ServerApp\\ConsoleApp1\\ServerApp.csproj",
+  "projectFilePath": "F:\\TRABAJO\\Repositorio SkyAir\\Server\\ServerApp\\ConsoleApp1\\ServerApp.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

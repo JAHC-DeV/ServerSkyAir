@@ -15,3 +15,20 @@ E:\Proyects\ServerApp\FisrtPlugin\obj\Debug\net6.0\linux-x64\FisrtPlugin.dll
 E:\Proyects\ServerApp\FisrtPlugin\obj\Debug\net6.0\linux-x64\refint\FisrtPlugin.dll
 E:\Proyects\ServerApp\FisrtPlugin\obj\Debug\net6.0\linux-x64\FisrtPlugin.pdb
 E:\Proyects\ServerApp\FisrtPlugin\obj\Debug\net6.0\linux-x64\ref\FisrtPlugin.dll
+F:\TRABAJO\Repositorio SkyAir\Server\ServerApp\FisrtPlugin\bin\Debug\net6.0\linux-x64\FisrtPlugin.deps.json
+F:\TRABAJO\Repositorio SkyAir\Server\ServerApp\FisrtPlugin\bin\Debug\net6.0\linux-x64\FisrtPlugin.dll
+F:\TRABAJO\Repositorio SkyAir\Server\ServerApp\FisrtPlugin\bin\Debug\net6.0\linux-x64\FisrtPlugin.pdb
+F:\TRABAJO\Repositorio SkyAir\Server\ServerApp\FisrtPlugin\bin\Debug\net6.0\linux-x64\AirModels.dll
+F:\TRABAJO\Repositorio SkyAir\Server\ServerApp\FisrtPlugin\bin\Debug\net6.0\linux-x64\DarkRift.dll
+F:\TRABAJO\Repositorio SkyAir\Server\ServerApp\FisrtPlugin\bin\Debug\net6.0\linux-x64\DarkRift.Server.dll
+F:\TRABAJO\Repositorio SkyAir\Server\ServerApp\FisrtPlugin\bin\Debug\net6.0\linux-x64\AirModels.pdb
+F:\TRABAJO\Repositorio SkyAir\Server\ServerApp\FisrtPlugin\obj\Debug\net6.0\linux-x64\FisrtPlugin.csproj.AssemblyReference.cache
+F:\TRABAJO\Repositorio SkyAir\Server\ServerApp\FisrtPlugin\obj\Debug\net6.0\linux-x64\FisrtPlugin.GeneratedMSBuildEditorConfig.editorconfig
+F:\TRABAJO\Repositorio SkyAir\Server\ServerApp\FisrtPlugin\obj\Debug\net6.0\linux-x64\FisrtPlugin.AssemblyInfoInputs.cache
+F:\TRABAJO\Repositorio SkyAir\Server\ServerApp\FisrtPlugin\obj\Debug\net6.0\linux-x64\FisrtPlugin.AssemblyInfo.cs
+F:\TRABAJO\Repositorio SkyAir\Server\ServerApp\FisrtPlugin\obj\Debug\net6.0\linux-x64\FisrtPlugin.csproj.CoreCompileInputs.cache
+F:\TRABAJO\Repositorio SkyAir\Server\ServerApp\FisrtPlugin\obj\Debug\net6.0\linux-x64\FisrtPlugin.csproj.CopyComplete
+F:\TRABAJO\Repositorio SkyAir\Server\ServerApp\FisrtPlugin\obj\Debug\net6.0\linux-x64\FisrtPlugin.dll
+F:\TRABAJO\Repositorio SkyAir\Server\ServerApp\FisrtPlugin\obj\Debug\net6.0\linux-x64\refint\FisrtPlugin.dll
+F:\TRABAJO\Repositorio SkyAir\Server\ServerApp\FisrtPlugin\obj\Debug\net6.0\linux-x64\FisrtPlugin.pdb
+F:\TRABAJO\Repositorio SkyAir\Server\ServerApp\FisrtPlugin\obj\Debug\net6.0\linux-x64\ref\FisrtPlugin.dll

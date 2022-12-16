@@ -9,8 +9,8 @@ namespace AirModels
     {
         public int PlayerId { get; set; }
         public ushort DeadType { get; set; }
-        public int[] Data { get; set; }
-        public DeadData(ushort _playerId, TypeDead type, int[] _data)
+        public float[] Data { get; set; }
+        public DeadData(int _playerId, TypeDead type, float[] _data)
         {
             PlayerId = _playerId;
             DeadType = (ushort)type;
@@ -22,9 +22,9 @@ namespace AirModels
         }
         public void Deserialize(DeserializeEvent e)
         {
-            PlayerId = e.Reader.ReadUInt16();
+            PlayerId = e.Reader.ReadInt32();
             DeadType = e.Reader.ReadUInt16();
-            Data = e.Reader.ReadInt32s();
+            Data = e.Reader.ReadSingles();
         }
 
         public void Serialize(SerializeEvent e)

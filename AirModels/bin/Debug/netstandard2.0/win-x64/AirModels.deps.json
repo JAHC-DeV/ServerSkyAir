@@ -1,12 +1,12 @@
 {
   "runtimeTarget": {
-    "name": ".NETStandard,Version=v2.0/linux-x64",
+    "name": ".NETStandard,Version=v2.0/win-x64",
     "signature": ""
   },
   "compilationOptions": {},
   "targets": {
     ".NETStandard,Version=v2.0": {},
-    ".NETStandard,Version=v2.0/linux-x64": {
+    ".NETStandard,Version=v2.0/win-x64": {
       "AirModels/1.0.0": {
         "dependencies": {
           "NETStandard.Library": "2.0.3",

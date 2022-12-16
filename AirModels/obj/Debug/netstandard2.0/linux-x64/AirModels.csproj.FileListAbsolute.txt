@@ -10,3 +10,15 @@ E:\Proyects\ServerApp\AirModels\obj\Debug\netstandard2.0\linux-x64\AirModels.csp
 E:\Proyects\ServerApp\AirModels\obj\Debug\netstandard2.0\linux-x64\AirModels.csproj.CopyComplete
 E:\Proyects\ServerApp\AirModels\obj\Debug\netstandard2.0\linux-x64\AirModels.dll
 E:\Proyects\ServerApp\AirModels\obj\Debug\netstandard2.0\linux-x64\AirModels.pdb
+F:\TRABAJO\Repositorio SkyAir\Server\ServerApp\AirModels\bin\Debug\netstandard2.0\linux-x64\AirModels.deps.json
+F:\TRABAJO\Repositorio SkyAir\Server\ServerApp\AirModels\bin\Debug\netstandard2.0\linux-x64\AirModels.dll
+F:\TRABAJO\Repositorio SkyAir\Server\ServerApp\AirModels\bin\Debug\netstandard2.0\linux-x64\AirModels.pdb
+F:\TRABAJO\Repositorio SkyAir\Server\ServerApp\AirModels\bin\Debug\netstandard2.0\linux-x64\DarkRift.dll
+F:\TRABAJO\Repositorio SkyAir\Server\ServerApp\AirModels\obj\Debug\netstandard2.0\linux-x64\AirModels.csproj.AssemblyReference.cache
+F:\TRABAJO\Repositorio SkyAir\Server\ServerApp\AirModels\obj\Debug\netstandard2.0\linux-x64\AirModels.GeneratedMSBuildEditorConfig.editorconfig
+F:\TRABAJO\Repositorio SkyAir\Server\ServerApp\AirModels\obj\Debug\netstandard2.0\linux-x64\AirModels.AssemblyInfoInputs.cache
+F:\TRABAJO\Repositorio SkyAir\Server\ServerApp\AirModels\obj\Debug\netstandard2.0\linux-x64\AirModels.AssemblyInfo.cs
+F:\TRABAJO\Repositorio SkyAir\Server\ServerApp\AirModels\obj\Debug\netstandard2.0\linux-x64\AirModels.csproj.CoreCompileInputs.cache
+F:\TRABAJO\Repositorio SkyAir\Server\ServerApp\AirModels\obj\Debug\netstandard2.0\linux-x64\AirModels.csproj.CopyComplete
+F:\TRABAJO\Repositorio SkyAir\Server\ServerApp\AirModels\obj\Debug\netstandard2.0\linux-x64\AirModels.dll
+F:\TRABAJO\Repositorio SkyAir\Server\ServerApp\AirModels\obj\Debug\netstandard2.0\linux-x64\AirModels.pdb

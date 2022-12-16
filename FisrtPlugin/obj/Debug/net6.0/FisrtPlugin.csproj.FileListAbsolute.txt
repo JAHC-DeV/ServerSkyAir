@@ -119,3 +119,18 @@ C:\Users\Jose A\Desktop\Nueva carpeta\ServerApp\FisrtPlugin\obj\Debug\net6.0\Fis
 C:\Users\Jose A\Desktop\Nueva carpeta\ServerApp\FisrtPlugin\obj\Debug\net6.0\FisrtPlugin.dll
 C:\Users\Jose A\Desktop\Nueva carpeta\ServerApp\FisrtPlugin\obj\Debug\net6.0\ref\FisrtPlugin.dll
 C:\Users\Jose A\Desktop\Nueva carpeta\ServerApp\FisrtPlugin\obj\Debug\net6.0\FisrtPlugin.pdb
+F:\TRABAJO\Repositorio SkyAir\Server\ServerApp\FisrtPlugin\bin\Debug\net6.0\FisrtPlugin.deps.json
+F:\TRABAJO\Repositorio SkyAir\Server\ServerApp\FisrtPlugin\bin\Debug\net6.0\FisrtPlugin.dll
+F:\TRABAJO\Repositorio SkyAir\Server\ServerApp\FisrtPlugin\bin\Debug\net6.0\FisrtPlugin.pdb
+F:\TRABAJO\Repositorio SkyAir\Server\ServerApp\FisrtPlugin\bin\Debug\net6.0\AirModels.dll
+F:\TRABAJO\Repositorio SkyAir\Server\ServerApp\FisrtPlugin\bin\Debug\net6.0\AirModels.pdb
+F:\TRABAJO\Repositorio SkyAir\Server\ServerApp\FisrtPlugin\obj\Debug\net6.0\FisrtPlugin.csproj.AssemblyReference.cache
+F:\TRABAJO\Repositorio SkyAir\Server\ServerApp\FisrtPlugin\obj\Debug\net6.0\FisrtPlugin.GeneratedMSBuildEditorConfig.editorconfig
+F:\TRABAJO\Repositorio SkyAir\Server\ServerApp\FisrtPlugin\obj\Debug\net6.0\FisrtPlugin.AssemblyInfoInputs.cache
+F:\TRABAJO\Repositorio SkyAir\Server\ServerApp\FisrtPlugin\obj\Debug\net6.0\FisrtPlugin.AssemblyInfo.cs
+F:\TRABAJO\Repositorio SkyAir\Server\ServerApp\FisrtPlugin\obj\Debug\net6.0\FisrtPlugin.csproj.CoreCompileInputs.cache
+F:\TRABAJO\Repositorio SkyAir\Server\ServerApp\FisrtPlugin\obj\Debug\net6.0\FisrtPlugin.csproj.CopyComplete
+F:\TRABAJO\Repositorio SkyAir\Server\ServerApp\FisrtPlugin\obj\Debug\net6.0\FisrtPlugin.dll
+F:\TRABAJO\Repositorio SkyAir\Server\ServerApp\FisrtPlugin\obj\Debug\net6.0\refint\FisrtPlugin.dll
+F:\TRABAJO\Repositorio SkyAir\Server\ServerApp\FisrtPlugin\obj\Debug\net6.0\FisrtPlugin.pdb
+F:\TRABAJO\Repositorio SkyAir\Server\ServerApp\FisrtPlugin\obj\Debug\net6.0\ref\FisrtPlugin.dll
