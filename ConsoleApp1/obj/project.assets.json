@@ -8,27 +8,32 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\SKYNET\\.nuget\\packages\\": {}
+    "C:\\Users\\JAHC-DeV\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\TRABAJO\\Repositorio SkyAir\\Server\\ServerApp\\ConsoleApp1\\ServerApp.csproj",
+      "projectUniqueName": "E:\\Proyects\\ServerApp\\ConsoleApp1\\ServerApp.csproj",
       "projectName": "ServerApp",
-      "projectPath": "F:\\TRABAJO\\Repositorio SkyAir\\Server\\ServerApp\\ConsoleApp1\\ServerApp.csproj",
-      "packagesPath": "C:\\Users\\SKYNET\\.nuget\\packages\\",
-      "outputPath": "F:\\TRABAJO\\Repositorio SkyAir\\Server\\ServerApp\\ConsoleApp1\\obj\\",
+      "projectPath": "E:\\Proyects\\ServerApp\\ConsoleApp1\\ServerApp.csproj",
+      "packagesPath": "C:\\Users\\JAHC-DeV\\.nuget\\packages\\",
+      "outputPath": "E:\\Proyects\\ServerApp\\ConsoleApp1\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\SKYNET\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\JAHC-DeV\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {}
+        "C:\\Program Files\\dotnet\\library-packs": {},
+        "C:\\Users\\JAHC-DeV\\Downloads\\Programs\\nugets": {}
       },
       "frameworks": {
         "net6.0": {
@@ -61,7 +66,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }
