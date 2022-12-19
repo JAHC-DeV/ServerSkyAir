@@ -86,8 +86,13 @@ namespace FisrtPlugin
                     break;
                 case Tags.PlayerLeave:
                     var playerLeave = e.GetMessage().Deserialize<PlayerLeave>();
-                    QuitPlayer(playerLeave.PlayerID,!playerLeave.IsAlive);
+                    QuitPlayer(playerLeave.PlayerID, !playerLeave.IsAlive);
                     break;
+                case Tags.BulletImpact:
+                    var playerImpact = e.GetMessage().Deserialize<PlayerData>();
+                    PlayerImpact(playerImpact);
+                    break;
+
                 default:
                     Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("Command: {0} Unsopported...", e.Tag);
@@ -95,6 +100,28 @@ namespace FisrtPlugin
                     break;
             }
         }
+
+        private void PlayerImpact(PlayerData playerImpact)
+        {
+            Console.WriteLine("Impact To Player: {0}",playerImpact.PlayerID);
+            if (playersData.ContainsKey(playerImpact.PlayerID))
+            {
+                playersData[playerImpact.PlayerID].Fuselage = playerImpact.Fuselage;
+                playersData[playerImpact.PlayerID].LastPlayerImpact = playerImpact.LastPlayerImpact;
+                // Console.WriteLine($"Recived:{playerData.PlayerID}");
+            }
+            try
+            {
+                SendToAllInRoom(Tags.UpdatePlayerData, playerImpact, SendMode.Reliable, (ushort)playerImpact.PlayerID,true);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                throw;
+            }
+          
+        }
+
         /// <summary>
         /// Metodo que se ejecuta cuando se recive que un cliente a muerto
         /// </summary>
@@ -109,11 +136,11 @@ namespace FisrtPlugin
                 {
                     playersData[playerImpact].Kills++;
                     using (var msg = Message.Create((ushort)Tags.UpdatePlayerData, playersData[playerImpact]))
-                       lobby.SendMessageToPlayer(playerImpact,msg,SendMode.Reliable);
+                        lobby.SendMessageToPlayer(playerImpact, msg, SendMode.Reliable);
                 }
             }
         }
-        
+
         /// <summary>
         /// Metodo que se ejecuta cuando se recive que un cliente esta disparando
         /// </summary>
@@ -138,6 +165,7 @@ namespace FisrtPlugin
                 playersData[playerData.PlayerID].R_X = playerData.R_X;
                 playersData[playerData.PlayerID].R_Y = playerData.R_Y;
                 playersData[playerData.PlayerID].R_Z = playerData.R_Z;
+                // Console.WriteLine($"Recived:{playerData.PlayerID}");
             }
             SendToAllInRoom(Tags.UpdatePlayerData, playerData, SendMode.Unreliable, (ushort)playerData.PlayerID);
 
@@ -232,7 +260,7 @@ namespace FisrtPlugin
         /// </summary>
         /// <param name="id">Id del cliente a eliminar</param>
         /// <param name="isDead">Define si se eliminara por que el cliente murio</param>
-        public void QuitPlayer(int id,bool isDead = false)
+        public void QuitPlayer(int id, bool isDead = false)
         {
             if (playersData.ContainsKey(id))
             {

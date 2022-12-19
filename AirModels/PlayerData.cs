@@ -36,8 +36,8 @@ namespace AirModels
         {
             PlayerID = e.Reader.ReadInt32();
             Nickname = e.Reader.ReadString();
-            PlayerAvatar = e.Reader.ReadByte();
-            ModelSkin = e.Reader.ReadByte();
+            PlayerAvatar = e.Reader.ReadUInt16();
+            ModelSkin = e.Reader.ReadUInt16();
             Fuselage = e.Reader.ReadUInt16();
             LastPlayerImpact = e.Reader.ReadInt32();
             IsAlive = e.Reader.ReadBoolean();

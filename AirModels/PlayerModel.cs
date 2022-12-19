@@ -15,8 +15,8 @@ namespace AirModels
         public string IdPublic { get; set; }
         public ushort IdRoom { get; set; }
         public string Nickname { get; set; }
-        public byte PlayerAvatar { get; set; }
-        public byte ModelSkin { get; set; }
+        public ushort PlayerAvatar { get; set; }
+        public ushort ModelSkin { get; set; }
         public ushort Fuselage { get; set; }
         public bool IsAlive { get; set; }
         public ushort Kills { get; set; }

@@ -5,7 +5,7 @@ namespace AirModels
 {
     public class JoinGameModel : PlayerModel
     {
-        public JoinGameModel(ushort id,string idPublic, string nickname, byte avatar,byte modelSkin)
+        public JoinGameModel(ushort id,string idPublic, string nickname, ushort avatar,ushort modelSkin)
         {
             PlayerID = id;
             IdPublic = idPublic;
@@ -24,8 +24,8 @@ namespace AirModels
             PlayerID = e.Reader.ReadInt32();
             IdPublic = e.Reader.ReadString();
             Nickname = e.Reader.ReadString();
-            PlayerAvatar = e.Reader.ReadByte();
-            ModelSkin = e.Reader.ReadByte();
+            PlayerAvatar = e.Reader.ReadUInt16();
+            ModelSkin = e.Reader.ReadUInt16();
         }
 
         public override void Serialize(SerializeEvent e)
