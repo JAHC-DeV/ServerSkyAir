@@ -1,30 +1,11 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {
-      "AirModels/1.0.0": {
-        "type": "project",
-        "framework": ".NETStandard,Version=v2.0",
-        "compile": {
-          "bin/placeholder/AirModels.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/AirModels.dll": {}
-        }
-      }
-    }
+    "net6.0": {}
   },
-  "libraries": {
-    "AirModels/1.0.0": {
-      "type": "project",
-      "path": "../AirModels/AirModels.csproj",
-      "msbuildProject": "../AirModels/AirModels.csproj"
-    }
-  },
+  "libraries": {},
   "projectFileDependencyGroups": {
-    "net6.0": [
-      "AirModels >= 1.0.0"
-    ]
+    "net6.0": []
   },
   "packageFolders": {
     "/home/codespace/.nuget/packages/": {}
@@ -32,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/workspaces/ServerSkyAir/FisrtPlugin/FisrtPlugin.csproj",
-      "projectName": "FisrtPlugin",
-      "projectPath": "/workspaces/ServerSkyAir/FisrtPlugin/FisrtPlugin.csproj",
+      "projectUniqueName": "/workspaces/ServerSkyAir/ConsoleApp1/ServerApp.csproj",
+      "projectName": "ServerApp",
+      "projectPath": "/workspaces/ServerSkyAir/ConsoleApp1/ServerApp.csproj",
       "packagesPath": "/home/codespace/.nuget/packages/",
-      "outputPath": "/workspaces/ServerSkyAir/FisrtPlugin/obj/",
+      "outputPath": "/workspaces/ServerSkyAir/ConsoleApp1/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/codespace/.nuget/NuGet/NuGet.Config"
@@ -50,11 +31,7 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {
-            "/workspaces/ServerSkyAir/AirModels/AirModels.csproj": {
-              "projectPath": "/workspaces/ServerSkyAir/AirModels/AirModels.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {
@@ -80,6 +57,10 @@
         "downloadDependencies": [
           {
             "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[6.0.20, 6.0.20]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.linux-x64",
             "version": "[6.0.20, 6.0.20]"
           },
           {

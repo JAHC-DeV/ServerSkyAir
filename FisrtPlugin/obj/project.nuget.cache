@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "OvIw3lliJ2dtnNx6lChPrCtTTQmTpiOutkO+xK1k6j/Lkn2B5kulmZx1AidKjqdMJJ7+BP0D/QCX2B7pKv5fqQ==",
+  "dgSpecHash": "ua9R4VkUYYrrj/l1ASVHhKJeKe5trApzYbQdUReDcTJxxru034oWg8QbSgn596zOk0XbuUn7JwnL9HGxDpfBJA==",
   "success": true,
-  "projectFilePath": "E:\\Proyects\\ServerApp\\FisrtPlugin\\FisrtPlugin.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "/workspaces/ServerSkyAir/FisrtPlugin/FisrtPlugin.csproj",
+  "expectedPackageFiles": [
+    "/home/codespace/.nuget/packages/microsoft.netcore.app.ref/6.0.20/microsoft.netcore.app.ref.6.0.20.nupkg.sha512",
+    "/home/codespace/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.20/microsoft.aspnetcore.app.ref.6.0.20.nupkg.sha512"
+  ],
   "logs": []
 }
